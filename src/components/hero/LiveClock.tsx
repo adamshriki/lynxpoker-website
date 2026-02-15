@@ -32,7 +32,7 @@ export function LiveClock() {
   return (
     <div className="relative w-full overflow-hidden rounded-2xl border border-border-primary shadow-elevation-5">
       {/* Clock Grid - mimics the real clock layout */}
-      <div className="grid grid-cols-[25%_50%_25%] grid-rows-[auto_min-content] min-h-[320px] md:min-h-[400px]"
+      <div className="grid grid-cols-[25%_50%_25%] grid-rows-[1fr_auto] aspect-video"
         style={{ backgroundColor: "#1a3a5c" }}>
         
         {/* Left Panel - Tournament Info */}
