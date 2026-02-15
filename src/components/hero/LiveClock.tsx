@@ -105,9 +105,7 @@ export function LiveClock() {
         <div className="flex flex-col justify-between p-4 md:p-6 border-l border-white/10">
           <div className="text-center mb-4">
             <div className="flex justify-center opacity-60">
-              <svg viewBox="0 0 120 24" className="h-4 md:h-6 text-white" fill="currentColor">
-                <text x="0" y="18" fontSize="16" fontWeight="bold" fontFamily="system-ui">LynxPoker</text>
-              </svg>
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-4 md:h-5" />
             </div>
           </div>
 

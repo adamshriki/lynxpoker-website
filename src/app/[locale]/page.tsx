@@ -47,13 +47,8 @@ export default function HomePage() {
       {/* ═══════════ Navigation ═══════════ */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-surface-primary/60 backdrop-blur-xl border-b border-white/5">
         <div className="mx-auto max-w-7xl px-6 py-3.5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-surface-blue-primary flex items-center justify-center">
-              <span className="text-white font-black text-sm">L</span>
-            </div>
-            <span className="text-xl font-bold text-text-primary tracking-tight">
-              Lynx<span className="text-text-blue-primary">Poker</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-6 md:h-7" />
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link href="#features" className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("nav.features")}</Link>
@@ -492,11 +487,8 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
             {/* Brand column */}
             <div className="col-span-2 md:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 rounded-lg bg-surface-blue-primary flex items-center justify-center">
-                  <span className="text-white font-black text-xs">L</span>
-                </div>
-                <span className="text-lg font-bold text-text-primary">LynxPoker</span>
+              <div className="mb-4">
+                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-6" />
               </div>
               <p className="text-sm text-text-minus-1 leading-relaxed">
                 Professional poker tournament management platform.

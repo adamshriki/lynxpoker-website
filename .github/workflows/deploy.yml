@@ -32,6 +32,8 @@ jobs:
 
       - name: Build
         run: npx next build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /lynxpoker-website
 
       - name: Create root index redirect
         run: |
