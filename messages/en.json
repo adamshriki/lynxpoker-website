@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "LynxPoker — Professional Poker Tournament Management",
+    "description": "Run professional poker tournaments from anywhere. Real-time sync, dealer management, player tracking. Start free today."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "useCases": "Use Cases",
+    "about": "About",
+    "startFree": "Start Free",
+    "watchDemo": "Watch Demo"
+  },
+  "hero": {
+    "title": "Professional poker tournaments, anywhere",
+    "subtitle": "The modern platform for tournament directors, floor managers, and dealers. Real-time sync across all devices. Start free in minutes.",
+    "cta": "Start Free",
+    "ctaSecondary": "Watch Demo"
+  },
+  "socialProof": {
+    "trusted": "Trusted by poker clubs worldwide",
+    "tournaments": "tournaments managed",
+    "players": "players tracked",
+    "countries": "countries"
+  },
+  "problem": {
+    "title": "The Old Way",
+    "items": [
+      "Desktop software that won't sync",
+      "Spreadsheets for player tracking",
+      "Shouting across the room to your dealers",
+      "Manual blind level management",
+      "No mobile access during tournaments"
+    ]
+  },
+  "solution": {
+    "title": "The LynxPoker Way",
+    "items": [
+      "Cloud platform that syncs in real-time",
+      "Complete player database with history",
+      "Dealer app for seamless coordination",
+      "Automated blind structure management",
+      "Full control from your phone or tablet"
+    ]
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Run professional tournaments with confidence",
+    "tournament": {
+      "title": "Complete Tournament Control",
+      "description": "Blind structures, breaks, late registration, prizes — everything in one place. Automated level progression with customizable announcements."
+    },
+    "sync": {
+      "title": "Always In Sync",
+      "description": "Every change updates instantly across all devices. Floor managers, dealers, and displays always show the same information."
+    },
+    "players": {
+      "title": "Know Your Players",
+      "description": "Track player history, buy-ins, cashes, and statistics across all tournaments. Build your community with persistent player profiles."
+    },
+    "dealers": {
+      "title": "Manage Your Dealers",
+      "description": "Track dealer assignments, breaks, and schedules. The only platform at this price point with comprehensive dealer management."
+    },
+    "mobile": {
+      "title": "Purpose-Built Apps",
+      "description": "Dedicated Floor App and Dealer App designed for staff workflows. Not just responsive web — real native experiences."
+    },
+    "multiOrg": {
+      "title": "Multiple Venues, One Platform",
+      "description": "Manage multiple poker clubs or locations from a single account. Switch between organizations with one click."
+    },
+    "learnMore": "Learn more"
+  },
+  "useCases": {
+    "title": "Built for your game",
+    "clubs": {
+      "title": "For Poker Clubs",
+      "description": "Run professional tournaments with staff coordination, player tracking, and complete tournament control."
+    },
+    "home": {
+      "title": "For Home Games",
+      "description": "Upgrade from timer apps. Track your regular players and run tournaments like a pro."
+    },
+    "charity": {
+      "title": "For Charity Events",
+      "description": "Professional presentation for sponsors and participants. Easy setup for volunteer staff."
+    }
+  },
+  "howItWorks": {
+    "title": "Up and running in minutes",
+    "step1": {
+      "title": "Set Up in Minutes",
+      "description": "Create your club, add your blind structure, and invite your staff. No installation required."
+    },
+    "step2": {
+      "title": "Run Your Tournament",
+      "description": "Start the clock, register players, and let LynxPoker handle the rest. Your team stays in sync automatically."
+    },
+    "step3": {
+      "title": "Grow Your Club",
+      "description": "Track player statistics, analyze tournament data, and build your poker community over time."
+    }
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Free tier for small games. Club plans from $29/month. No hidden fees, no contracts.",
+    "cta": "See pricing"
+  },
+  "cta": {
+    "title": "Ready to run professional tournaments?",
+    "subtitle": "Start free today. No credit card required.",
+    "button": "Start Free"
+  },
+  "footer": {
+    "product": "Product",
+    "resources": "Resources",
+    "company": "Company",
+    "connect": "Connect",
+    "features": "Features",
+    "pricing": "Pricing",
+    "useCases": "Use Cases",
+    "mobileApps": "Mobile Apps",
+    "whatsNew": "What's New",
+    "helpCenter": "Help Center",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "systemStatus": "System Status",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2026 LynxPoker. All rights reserved."
+  }
+}

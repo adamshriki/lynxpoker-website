@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+/* ========== Design System Tokens as CSS Custom Properties ========== */
+:root {
+  /* Color Primitives */
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+  --amber-950: #451a03;
+
+  --blue-50: #f2f5fc;
+  --blue-100: #e1e9f8;
+  --blue-200: #cad9f3;
+  --blue-300: #a5c1eb;
+  --blue-400: #7aa0e0;
+  --blue-500: #5f84d8;
+  --blue-600: #4665ca;
+  --blue-700: #3c54b9;
+  --blue-800: #364697;
+  --blue-900: #303e78;
+  --blue-950: #21284a;
+
+  --cyan-50: #ecfeff;
+  --cyan-100: #cffafe;
+  --cyan-200: #a5f3fc;
+  --cyan-300: #67e8f9;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
+  --cyan-600: #0891b2;
+  --cyan-700: #0e7490;
+  --cyan-800: #155e75;
+  --cyan-900: #164e63;
+  --cyan-950: #083344;
+
+  --gray-50: #ffffff;
+  --gray-100: #f8fafc;
+  --gray-100-10: #f8fafc10;
+  --gray-150: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-850: #121c2c;
+  --gray-900: #0b1224;
+  --gray-950: #04081d;
+
+  --green-50: #effaf4;
+  --green-100: #d7f4e3;
+  --green-200: #b2e8cc;
+  --green-300: #80d5ae;
+  --green-400: #4abb8b;
+  --green-500: #29a072;
+  --green-600: #1a815b;
+  --green-700: #15674b;
+  --green-800: #13523c;
+  --green-900: #114333;
+  --green-950: #08261d;
+
+  --rose-50: #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-200: #fecdd3;
+  --rose-300: #fda4af;
+  --rose-400: #fb7185;
+  --rose-500: #f43f5e;
+  --rose-600: #e11d48;
+  --rose-700: #be123c;
+  --rose-800: #9f1239;
+  --rose-900: #881337;
+  --rose-950: #4c0519;
+
+  /* Semantic Tokens */
+  --surface-primary: var(--gray-900);
+  --surface-secondary: var(--gray-950);
+  --surface-plus-1: var(--gray-850);
+  --surface-plus-2: var(--gray-800);
+  --surface-plus-3: var(--gray-700);
+  --surface-plus-4: var(--gray-600);
+  --surface-plus-6: var(--gray-400);
+  --surface-plus-7: var(--gray-300);
+  --surface-invert: var(--gray-100);
+  --surface-invert-10: var(--gray-100-10);
+  --surface-blue-primary: var(--blue-500);
+  --surface-blue-plus-1: var(--blue-400);
+  --surface-blue-minus-5: var(--blue-950);
+  --surface-green-primary: var(--green-500);
+  --surface-green-plus-1: var(--green-400);
+  --surface-amber-primary: var(--amber-500);
+  --surface-amber-plus-1: var(--amber-400);
+  --surface-rose-primary: var(--rose-500);
+  --surface-rose-plus-1: var(--rose-400);
+
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-300);
+  --text-minus-1: var(--gray-400);
+  --text-minus-2: var(--gray-500);
+  --text-invert: var(--gray-900);
+  --text-blue-primary: var(--blue-500);
+  --text-green-primary: var(--green-500);
+  --text-amber-primary: var(--amber-500);
+  --text-rose-primary: var(--rose-500);
+
+  --border-primary: var(--gray-800);
+  --border-secondary: var(--gray-700);
+  --border-plus-1: var(--gray-600);
+  --border-plus-2: var(--gray-500);
+  --border-plus-3: var(--gray-400);
+  --border-blue-primary: var(--blue-500);
+  --border-blue-minus-4: var(--blue-900);
+  --border-rose-primary: var(--rose-500);
+
+  --outline-primary: var(--gray-800);
+  --outline-secondary: var(--gray-700);
+  --outline-blue-primary: var(--blue-500);
+  --outline-blue-minus-4: var(--blue-900);
+  --outline-rose-primary: var(--rose-500);
+
+  /* Spacing Primitives */
+  --ds-spacing-xxs: 0.125rem;
+  --ds-spacing-xs: 0.25rem;
+  --ds-spacing-sm: 0.5rem;
+  --ds-spacing-md: 0.75rem;
+  --ds-spacing-lg: 1rem;
+  --ds-spacing-xl: 1.25rem;
+  --ds-spacing-xxl: 1.5rem;
+  --ds-spacing-3xl: 1.75rem;
+  --ds-spacing-4xl: 2rem;
+  --ds-spacing-5xl: 2.25rem;
+  --ds-spacing-6xl: 2.5rem;
+  --ds-spacing-7xl: 2.75rem;
+  --ds-spacing-8xl: 3rem;
+
+  /* Sizing */
+  --ds-sizing-xxs: 0.125rem;
+  --ds-sizing-xs: 0.25rem;
+  --ds-sizing-sm: 0.5rem;
+  --ds-sizing-md: 0.75rem;
+  --ds-sizing-lg: 1rem;
+  --ds-sizing-xl: 1.25rem;
+  --ds-sizing-xxl: 1.5rem;
+  --ds-sizing-3xl: 1.75rem;
+  --ds-sizing-4xl: 2rem;
+  --ds-sizing-5xl: 2.25rem;
+  --ds-sizing-6xl: 2.5rem;
+  --ds-sizing-7xl: 2.75rem;
+  --ds-sizing-8xl: 3rem;
+  --ds-sizing-9xl: 4rem;
+  --ds-sizing-10xl: 6rem;
+  --ds-sizing-11xl: 8rem;
+
+  /* Radius */
+  --ds-radius-3xs: 0.125rem;
+  --ds-radius-xxs: 0.25rem;
+  --ds-radius-xs: 0.5rem;
+  --ds-radius-sm: 1rem;
+  --ds-radius-md: 1.5rem;
+  --ds-radius-lg: 3rem;
+  --ds-radius-xl: 4rem;
+  --ds-radius-xxl: 8rem;
+}
+
+/* ========== Tailwind v4 Theme Extension ========== */
+@theme inline {
+  /* Colors */
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-plus-1: var(--surface-plus-1);
+  --color-surface-plus-2: var(--surface-plus-2);
+  --color-surface-plus-3: var(--surface-plus-3);
+  --color-surface-plus-4: var(--surface-plus-4);
+  --color-surface-plus-6: var(--surface-plus-6);
+  --color-surface-plus-7: var(--surface-plus-7);
+  --color-surface-invert: var(--surface-invert);
+  --color-surface-invert-10: var(--surface-invert-10);
+  --color-surface-blue-primary: var(--surface-blue-primary);
+  --color-surface-blue-plus-1: var(--surface-blue-plus-1);
+  --color-surface-blue-minus-5: var(--surface-blue-minus-5);
+  --color-surface-green-primary: var(--surface-green-primary);
+  --color-surface-green-plus-1: var(--surface-green-plus-1);
+  --color-surface-amber-primary: var(--surface-amber-primary);
+  --color-surface-amber-plus-1: var(--surface-amber-plus-1);
+  --color-surface-rose-primary: var(--surface-rose-primary);
+  --color-surface-rose-plus-1: var(--surface-rose-plus-1);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-minus-1: var(--text-minus-1);
+  --color-text-minus-2: var(--text-minus-2);
+  --color-text-invert: var(--text-invert);
+  --color-text-blue-primary: var(--text-blue-primary);
+  --color-text-green-primary: var(--text-green-primary);
+  --color-text-amber-primary: var(--text-amber-primary);
+  --color-text-rose-primary: var(--text-rose-primary);
+
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+  --color-border-plus-1: var(--border-plus-1);
+  --color-border-plus-2: var(--border-plus-2);
+  --color-border-plus-3: var(--border-plus-3);
+  --color-border-blue-primary: var(--border-blue-primary);
+  --color-border-blue-minus-4: var(--border-blue-minus-4);
+  --color-border-rose-primary: var(--border-rose-primary);
+
+  --color-outline-primary: var(--outline-primary);
+  --color-outline-secondary: var(--outline-secondary);
+  --color-outline-blue-primary: var(--outline-blue-primary);
+  --color-outline-rose-primary: var(--outline-rose-primary);
+
+  /* Fonts */
+  --font-sans: var(--font-lato), system-ui, sans-serif;
+  --font-hebrew: var(--font-rubik), system-ui, sans-serif;
+
+  /* Box Shadows */
+  --shadow-elevation-1: 0px 2px 6px rgba(0, 0, 0, 0.48);
+  --shadow-elevation-2: 0px 4px 6px rgba(0, 0, 0, 0.48);
+  --shadow-elevation-3: 0px 2px 6px rgba(0, 0, 0, 0.48), 0px 4px 8px rgba(0, 0, 0, 0.48);
+  --shadow-elevation-4: 0px 4px 8px rgba(0, 0, 0, 0.52), 0px 6px 12px rgba(0, 0, 0, 0.42);
+  --shadow-elevation-5: 0px 4px 8px rgba(0, 0, 0, 0.56), 0px 6px 8px rgba(0, 0, 0, 0.48), 0px 8px 16px rgba(0, 0, 0, 0.36);
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.3s ease-in-out;
+  --animate-fade-out: fadeOut 0.3s ease-in-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+  --animate-slide-down: slideDown 0.4s ease-out;
+  --animate-scale-in: scaleIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ========== Typography Classes (from design system) ========== */
+* {
+  text-rendering: geometricPrecision;
+}
+
+.ds-text-caption { font-size: 0.75rem; line-height: 0.875rem; }
+.ds-text-body { font-size: 0.875rem; line-height: 1.125rem; }
+.ds-text-body-sb { font-size: 0.875rem; font-weight: 600; line-height: 1.125rem; }
+.ds-text-body-b { font-size: 0.875rem; font-weight: 700; line-height: 1.125rem; }
+.ds-text-subtitle { font-size: 1rem; line-height: 1.25rem; }
+.ds-text-subtitle-sb { font-size: 1rem; font-weight: 600; line-height: 1.25rem; }
+.ds-text-subtitle-b { font-size: 1rem; font-weight: 700; line-height: 1.25rem; }
+.ds-text-subtitle-xb { font-size: 1rem; font-weight: 800; line-height: 1.25rem; }
+.ds-text-title { font-size: 1.125rem; line-height: 1.5rem; }
+.ds-text-banner { font-size: 1.25rem; line-height: 1.5rem; }
+.ds-text-headline { font-size: 1.5rem; line-height: 1.875rem; }
+.ds-text-headline-b { font-size: 1.5rem; font-weight: 700; line-height: 1.875rem; }
+.ds-text-h6 { font-size: 1.875rem; line-height: 2.25rem; }
+.ds-text-h6-b { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; }
+.ds-text-h5 { font-size: 2.25rem; font-weight: 700; line-height: 2.75rem; }
+.ds-text-h5-xb { font-size: 2.25rem; font-weight: 800; line-height: 2.75rem; }
+.ds-text-h4 { font-size: 2.625rem; font-weight: 700; line-height: 3rem; }
+.ds-text-h3 { font-size: 3rem; font-weight: 700; line-height: 3.5rem; }
+.ds-text-h2 { font-size: 3.75rem; font-weight: 700; line-height: 4.5rem; }
+.ds-text-h2-xb { font-size: 3.75rem; font-weight: 800; line-height: 4.5rem; }
+.ds-text-h1 { font-size: 4.5rem; font-weight: 700; line-height: 5.125rem; }
+.ds-text-display { font-size: 5.375rem; font-weight: 700; line-height: 6rem; }
+
+/* ========== Base Styles ========== */
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--surface-blue-primary);
+  color: var(--text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--outline-blue-primary);
+  outline-offset: 2px;
+}
+
+[dir="rtl"] {
+  text-align: right;
+}
