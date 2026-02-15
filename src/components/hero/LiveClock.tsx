@@ -90,7 +90,7 @@ export function LiveClock() {
                 <div className="flex flex-col items-center justify-center">
                   <div className="ds-text-fluid-big ds-text-bigshadow-white font-black leading-[1.4]">
                     <span className="tabular-nums">{pad(minutes)}</span>
-                    <motion.span animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>:</motion.span>
+                    <span>:</span>
                     <span className="tabular-nums">{pad(seconds)}</span>
                   </div>
                 </div>
