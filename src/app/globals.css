@@ -283,6 +283,78 @@
 .ds-text-h1 { font-size: 4.5rem; font-weight: 700; line-height: 5.125rem; }
 .ds-text-display { font-size: 5.375rem; font-weight: 700; line-height: 6rem; }
 
+/* ========== Clock Component Styles (from design system) ========== */
+.ds-clock {
+  container-type: size;
+  container-name: clock;
+}
+.ds-clock-grid {
+  grid-template-areas:
+    'Left Middle Right'
+    'Bottom Bottom Bottom';
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: auto min-content;
+}
+[dir='rtl'] .ds-clock-grid {
+  grid-template-areas:
+    'Right Middle Left'
+    'Bottom Bottom Bottom';
+}
+@container clock (orientation: portrait) {
+  .ds-clock-grid {
+    grid-template-areas: 'Left Right' 'Middle Middle' 'Bottom Bottom';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto min-content;
+  }
+}
+
+/* Fluid typography for clock */
+.ds-text-fluid-value { font-size: clamp(0.63rem, min(5cqh, 10cqw), 6rem); }
+.ds-text-fluid-label { font-size: clamp(0.38rem, min(4cqh, 8cqw), 4.5rem); }
+.ds-text-fluid-subvalue { font-size: clamp(0.38rem, min(4cqh, 8cqw), 3.75rem); }
+.ds-text-fluid-description { font-size: clamp(0.63rem, min(5cqh, 6cqw), 6rem); }
+.ds-text-fluid-title { font-size: clamp(0.75rem, min(6cqh, 6cqw), 7.5rem); }
+.ds-text-fluid-display { font-size: clamp(1.31rem, min(10cqh, 10cqw), 12.5rem); }
+.ds-text-fluid-big { font-size: clamp(3.13rem, min(28cqh, 36cqw), 38.5rem); }
+
+/* Clock fluid spacing */
+.p-clock-fluid-sm { padding: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.p-clock-fluid-md { padding: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.p-clock-fluid-lg { padding: clamp(0.5rem, min(2cqh, 3cqw), 4rem); }
+.p-clock-fluid-xl { padding: clamp(0.6rem, min(3cqh, 6cqw), 5rem); }
+.px-clock-fluid-lg { padding-left: clamp(0.5rem, min(2cqh, 3cqw), 4rem); padding-right: clamp(0.5rem, min(2cqh, 3cqw), 4rem); }
+.px-clock-fluid-xl { padding-left: clamp(0.6rem, min(3cqh, 6cqw), 5rem); padding-right: clamp(0.6rem, min(3cqh, 6cqw), 5rem); }
+.px-clock-fluid-xxl { padding-left: clamp(0.75rem, min(4cqh, 8cqw), 6rem); padding-right: clamp(0.75rem, min(4cqh, 8cqw), 6rem); }
+.py-clock-fluid-sm { padding-top: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); padding-bottom: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.py-clock-fluid-md { padding-top: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); padding-bottom: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.py-clock-fluid-lg { padding-top: clamp(0.5rem, min(2cqh, 3cqw), 4rem); padding-bottom: clamp(0.5rem, min(2cqh, 3cqw), 4rem); }
+.pt-clock-fluid-sm { padding-top: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.pb-clock-fluid-lg { padding-bottom: clamp(0.5rem, min(2cqh, 3cqw), 4rem); }
+.gap-y-clock-fluid-xxs { row-gap: 0.5cqmin; }
+.gap-y-clock-fluid-md { row-gap: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.gap-x-clock-fluid-md { column-gap: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.gap-x-clock-fluid-lg { column-gap: clamp(0.5rem, min(2cqh, 3cqw), 4rem); }
+.space-y-clock-fluid-xxs > * + * { margin-top: 0.5cqmin; }
+.space-y-clock-fluid-xs > * + * { margin-top: 1cqmin; }
+.space-y-clock-fluid-sm > * + * { margin-top: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.space-y-clock-fluid-md > * + * { margin-top: clamp(0.3rem, min(1cqh, 2cqw), 2.5rem); }
+.space-y-clock-fluid-lg > * + * { margin-top: clamp(0.5rem, min(2cqh, 3cqw), 4rem); }
+.h-clock-fluid-xxs { height: 0.5cqmin; }
+
+/* Text shadows */
+.ds-text-bigshadow-white {
+  text-shadow: 0px 1px 0px #f8fafc, 0px 2px 0px #d4dfea, 0px 3px 0px #a2b6cb, 0px 4px 0px #647f9b, 0px 12px 16px rgba(30, 41, 59, 0.42);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
 /* ========== Base Styles ========== */
 html {
   color-scheme: dark;

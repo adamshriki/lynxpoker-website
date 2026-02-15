@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 /**
- * A simulated live tournament clock for the hero section.
- * Uses container-query-based sizing to maintain 16:9 ratio on all screens.
+ * Marketing demo clock — mirrors the real Clock organism from the design system.
+ * Uses the same CSS classes (ds-clock, ds-clock-grid, ds-text-fluid-*, etc.)
+ * and grid-template-areas layout. Forced to 16:9 via padding-bottom trick.
  */
 export function LiveClock() {
   const [minutes, setMinutes] = useState(12);
@@ -30,114 +31,144 @@ export function LiveClock() {
   return (
     <div
       className="relative w-full overflow-hidden rounded-2xl border border-border-primary shadow-elevation-5"
-      style={{ containerType: "size", paddingBottom: "56.25%", height: 0 }}
+      style={{ paddingBottom: "56.25%", height: 0 }}
     >
-      <div
-        className="absolute inset-0 grid grid-cols-[25%_50%_25%] grid-rows-[1fr_auto]"
+      {/* ds-clock container — same as the real component */}
+      <section
+        className="ds-clock absolute inset-0 cursor-default rounded-2xl"
         style={{ backgroundColor: "#1a3a5c" }}
       >
-        {/* ── Left Panel ── */}
-        <div className="flex flex-col justify-between overflow-hidden border-r border-white/10" style={{ padding: "4cqh 3cqw" }}>
-          <div className="text-center">
-            <div className="font-bold text-white/60 uppercase tracking-wider" style={{ fontSize: "clamp(0.4rem, 1.8cqh, 0.875rem)" }}>
-              ♠ Royal Flush Club
-            </div>
-          </div>
+        <div className="ds-clock-grid grid h-full w-full gap-0">
 
-          <div className="text-right" style={{ display: "flex", flexDirection: "column", gap: "2cqh" }}>
-            {[
-              { value: "10,000", label: "Starting Stack" },
-              { value: "8 Lvl", label: "Late Reg" },
-              { value: "Unlimited", label: "Re-Entry" },
-            ].map(({ value, label }) => (
-              <div key={label}>
-                <div className="font-black text-white" style={{ fontSize: "clamp(0.5rem, 3cqh, 1.5rem)" }}>{value}</div>
-                <div className="font-semibold text-white/50" style={{ fontSize: "clamp(0.3rem, 1.5cqh, 0.75rem)" }}>{label}</div>
+          {/* ── Left Panel (grid-area: Left) ── */}
+          <div className="[container-type:size] [grid-area:Left]">
+            <div className="flex h-full w-full flex-col items-center gap-y-clock-fluid-md p-clock-fluid-lg">
+              {/* Club logo area */}
+              <div className="flex aspect-[3/1] w-full flex-col items-center justify-center">
+                <div className="ds-text-fluid-value truncate font-black leading-[1.1]">
+                  Royal Flush Club
+                </div>
               </div>
-            ))}
-          </div>
 
-          <div>
-            <div className="font-black text-amber-400" style={{ fontSize: "clamp(0.5rem, 3cqh, 1.5rem)" }}>₪12,500</div>
-            <div className="font-semibold text-white/50" style={{ fontSize: "clamp(0.3rem, 1.5cqh, 0.75rem)" }}>Total Prize Pool</div>
-          </div>
-        </div>
-
-        {/* ── Center Panel ── */}
-        <div className="flex flex-col bg-black/25 overflow-hidden">
-          <div className="text-center" style={{ padding: "3cqh 3cqw 0" }}>
-            <h2 className="font-bold text-white truncate" style={{ fontSize: "clamp(0.5rem, 2.5cqh, 1.125rem)" }}>
-              Saturday Night Special
-            </h2>
-            <p className="font-semibold text-white/50" style={{ fontSize: "clamp(0.4rem, 1.8cqh, 0.875rem)" }}>
-              ₪100+₪20 NLH Freezeout
-            </p>
-            <div className="mx-auto rounded bg-amber-400" style={{ height: "0.3cqh", width: "8cqw", marginTop: "1.5cqh" }} />
-          </div>
-
-          <div className="flex-1 flex flex-col items-center justify-center" style={{ gap: "2cqh" }}>
-            {/* Timer */}
-            <div className="font-black text-white leading-none" style={{ fontSize: "clamp(1rem, 12cqh, 7rem)" }}>
-              <span className="tabular-nums">{pad(minutes)}</span>
-              <motion.span animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>:</motion.span>
-              <span className="tabular-nums">{pad(seconds)}</span>
-            </div>
-
-            {/* Blinds */}
-            <div className="flex items-center text-white" style={{ gap: "1cqw" }}>
-              <span className="font-black" style={{ fontSize: "clamp(0.6rem, 5cqh, 2.5rem)" }}>200 / 400</span>
-              <span className="font-bold text-white/50" style={{ fontSize: "clamp(0.5rem, 3.5cqh, 1.5rem)" }}>/ 400</span>
-            </div>
-
-            {/* Next */}
-            <div className="flex items-center text-white/40" style={{ gap: "0.5cqw" }}>
-              <span className="font-bold" style={{ fontSize: "clamp(0.4rem, 1.8cqh, 0.875rem)" }}>Next</span>
-              <span className="font-bold" style={{ fontSize: "clamp(0.4rem, 2.2cqh, 1rem)" }}>300 / 600</span>
-            </div>
-          </div>
-        </div>
-
-        {/* ── Right Panel ── */}
-        <div className="flex flex-col justify-between overflow-hidden border-l border-white/10" style={{ padding: "4cqh 3cqw" }}>
-          <div className="flex justify-center opacity-60">
-            <img src={`${basePath}/logo.svg`} alt="LynxPoker" style={{ height: "clamp(0.6rem, 3cqh, 1.25rem)" }} />
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: "2cqh" }}>
-            {[
-              { value: "Level 5", label: null },
-              { value: "01:23:45", label: "Total Time" },
-              { value: "₪100+₪20", label: "Buy-In" },
-              { value: "18/25", label: "Entries" },
-              { value: "13,889", label: "Avg Stack" },
-            ].map(({ value, label }) => (
-              <div key={value}>
-                <div className="font-black text-white" style={{ fontSize: "clamp(0.5rem, 3cqh, 1.5rem)" }}>{value}</div>
-                {label && <div className="font-semibold text-white/50" style={{ fontSize: "clamp(0.3rem, 1.5cqh, 0.75rem)" }}>{label}</div>}
+              {/* Stats */}
+              <div className="flex h-full w-full flex-col border-r border-white/20 text-right text-text-primary">
+                <div className="flex flex-grow flex-col">
+                  <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-md">
+                    <div className="ds-text-fluid-value font-black leading-[1.1]">10,000</div>
+                    <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Starting Stack</div>
+                  </div>
+                  <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-sm">
+                    <div className="ds-text-fluid-value font-black leading-[1.1]">8 Lvl</div>
+                    <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Late Reg</div>
+                  </div>
+                  <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-sm">
+                    <div className="ds-text-fluid-value font-black leading-[1.1]">Unlimited</div>
+                    <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Re-Entry</div>
+                  </div>
+                </div>
+                <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-sm">
+                  <div className="ds-text-fluid-value font-black leading-[1.1] text-text-amber-primary">₪12,500</div>
+                  <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Total Prize Pool</div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
 
-          <div>
-            <div className="font-semibold text-white/50" style={{ fontSize: "clamp(0.3rem, 1.5cqh, 0.75rem)" }}>Next Break</div>
-            <div className="font-bold text-white" style={{ fontSize: "clamp(0.4rem, 2.2cqh, 1rem)" }}>27:47</div>
+          {/* ── Center Panel (grid-area: Middle) ── */}
+          <div className="flex flex-col text-center [container-type:size] [grid-area:Middle] bg-black/25">
+            <div className="space-y-clock-fluid-lg px-clock-fluid-xl py-clock-fluid-lg pb-0">
+              <div className="space-y-clock-fluid-sm">
+                <h2 className="ds-text-fluid-title truncate font-bold leading-[1.1] text-text-primary">Saturday Night Special</h2>
+                <h3 className="ds-text-fluid-description font-semibold leading-[1.2] text-text-secondary">₪100+₪20 NLH Freezeout</h3>
+              </div>
+              <div className="mx-auto h-clock-fluid-xxs w-1/6 rounded bg-text-amber-primary"></div>
+            </div>
+
+            <div className="flex flex-grow flex-col gap-y-clock-fluid-md px-clock-fluid-xxl pb-clock-fluid-lg pt-clock-fluid-sm">
+              {/* Timer */}
+              <div className="flex grow flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="ds-text-fluid-big ds-text-bigshadow-white font-black leading-[1.4]">
+                    <span className="tabular-nums">{pad(minutes)}</span>
+                    <motion.span animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>:</motion.span>
+                    <span className="tabular-nums">{pad(seconds)}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Blinds */}
+              <div className="flex flex-grow flex-col items-center justify-center gap-y-clock-fluid-md">
+                <div className="flex flex-row items-center gap-x-clock-fluid-lg truncate">
+                  <span className="ds-text-fluid-display truncate font-black leading-[1.1]">200 / 400</span>
+                  <span className="ds-text-fluid-title truncate font-bold leading-[1.1]">/ 400</span>
+                </div>
+
+                {/* Next level */}
+                <div className="flex items-center justify-center gap-x-clock-fluid-lg truncate opacity-50">
+                  <span className="ds-text-fluid-description truncate font-bold leading-[1.1]">Next</span>
+                  <span className="ds-text-fluid-title font-bold leading-[1.1]">300 / 600</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* ── Bottom Announcement ── */}
-        <div className="col-span-3 bg-black/25 overflow-hidden" style={{ padding: "1cqh 0" }}>
-          <motion.div
-            className="whitespace-nowrap font-bold text-white"
-            style={{ fontSize: "clamp(0.4rem, 2cqh, 1rem)" }}
-            animate={{ x: ["100%", "-100%"] }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          >
-            🏆 Welcome to Saturday Night Special! Late registration closes at Level 8. Good luck to all players! 🃏
-          </motion.div>
-        </div>
-      </div>
+          {/* ── Right Panel (grid-area: Right) ── */}
+          <div className="[container-type:size] [grid-area:Right]">
+            <div className="flex h-full w-full flex-col items-center gap-y-clock-fluid-md p-clock-fluid-lg">
+              {/* Logo */}
+              <div className="flex w-full flex-col items-center p-clock-fluid-sm">
+                <div className="flex w-2/3 flex-col justify-center opacity-60">
+                  <img src={`${basePath}/logo.svg`} alt="LynxPoker" className="w-full" />
+                </div>
+              </div>
 
-      {/* Glow overlay */}
+              {/* Stats */}
+              <div className="flex h-full w-full flex-col border-l border-white/20 text-text-primary">
+                <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-sm">
+                  <div className="ds-text-fluid-value font-black leading-[1.1]">Level 5</div>
+                </div>
+                {/* Total time */}
+                <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-sm">
+                  <div className="ds-text-fluid-value font-black leading-[1.1]">01:23:45</div>
+                  <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Total Time</div>
+                </div>
+                <div className="flex flex-grow flex-col justify-center">
+                  <div className="space-y-clock-fluid-xs px-clock-fluid-lg py-clock-fluid-md">
+                    <div className="ds-text-fluid-value font-black leading-[1.1]">₪100+₪20</div>
+                    <div className="ds-text-fluid-subvalue font-bold leading-[1.1] text-text-secondary">(₪80 + ₪20)</div>
+                    <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Buy-In</div>
+                  </div>
+                  <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-md">
+                    <div className="ds-text-fluid-value font-black leading-[1.1]">18/25</div>
+                    <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Entries</div>
+                  </div>
+                  <div className="space-y-clock-fluid-xxs px-clock-fluid-lg py-clock-fluid-md">
+                    <div className="ds-text-fluid-value font-black leading-[1.1]">13,889</div>
+                    <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Avg Stack</div>
+                  </div>
+                </div>
+                {/* Next break */}
+                <div className="px-clock-fluid-lg py-clock-fluid-md">
+                  <div className="ds-text-fluid-label font-semibold leading-[1.1] text-text-secondary">Next Break</div>
+                  <div className="ds-text-fluid-subvalue font-bold leading-[1.1]">27:47</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Bottom Announcement (grid-area: Bottom) ── */}
+          <div className="bg-black/25 [container-type:inline-size] [grid-area:Bottom]">
+            <div className="relative flex w-full items-center gap-y-clock-fluid-md overflow-hidden py-clock-fluid-sm">
+              <div className="ds-text-fluid-subvalue flex-grow animate-marquee whitespace-nowrap font-bold leading-[1.1] text-text-primary">
+                🏆 Welcome to Saturday Night Special! Late registration closes at Level 8. Good luck to all players! 🃏
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Subtle glow overlay */}
       <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-t from-surface-blue-primary/5 to-transparent" />
     </div>
   );
