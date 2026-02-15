@@ -367,7 +367,7 @@ export default function HomePage() {
             {[
               { key: "clubs", Icon: Building2, gradient: "from-blue-600/30 to-blue-900/30", emoji: "🏢" },
               { key: "home", Icon: Home, gradient: "from-green-600/30 to-green-900/30", emoji: "🏠" },
-              { key: "charity", Icon: Heart, gradient: "from-rose-600/30 to-rose-900/30", emoji: "❤️" },
+              { key: "charity", Icon: Building2, gradient: "from-rose-600/30 to-rose-900/30", emoji: "🎪" },
             ].map(({ key, Icon, gradient, emoji }) => (
               <motion.div
                 key={key}
