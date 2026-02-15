@@ -29,8 +29,8 @@ export function LiveClock() {
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-2xl border border-border-primary shadow-elevation-5 aspect-video"
-      style={{ containerType: "size" }}
+      className="relative w-full overflow-hidden rounded-2xl border border-border-primary shadow-elevation-5"
+      style={{ containerType: "size", paddingBottom: "56.25%", height: 0 }}
     >
       <div
         className="absolute inset-0 grid grid-cols-[25%_50%_25%] grid-rows-[1fr_auto]"
