@@ -112,6 +112,15 @@
     "subtitle": "Start free today. No credit card required.",
     "button": "Start Free"
   },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights, guides, and updates from the LynxPoker team",
+    "allPosts": "All Posts",
+    "readMore": "Read more",
+    "backHome": "Back to home",
+    "comingSoon": "Coming Soon",
+    "comingSoonDesc": "We're working on our first posts. Check back soon!"
+  },
   "footer": {
     "product": "Product",
     "resources": "Resources",
