@@ -25,6 +25,26 @@ export interface BlogPost {
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "best-poker-tournament-management-software",
+    category: "industry",
+    emoji: "🏆",
+    dateISO: "2026-02-17",
+    en: {
+      title: "The 5 Best Poker Tournament Management Tools in 2026",
+      excerpt:
+        "Looking for the best poker tournament management software? We compare the top 5 tools — from free tournament clocks to full-featured platforms with dealer management, mystery bounty support, and real-time sync.",
+      date: "Feb 17, 2026",
+      readTime: "12 min read",
+    },
+    he: {
+      title: "5 כלי ניהול טורנירי הפוקר הטובים ביותר ב-2026",
+      excerpt:
+        "מחפשים את התוכנה הטובה ביותר לניהול טורנירי פוקר? אנחנו משווים את 5 הכלים המובילים — משעוני טורניר חינמיים ועד פלטפורמות מלאות עם ניהול דילרים, תמיכה במיסטרי באונטי וסנכרון בזמן אמת.",
+      date: "17 בפברואר 2026",
+      readTime: "12 דק׳ קריאה",
+    },
+  },
+  {
     slug: "introducing-lynxpoker",
     category: "product",
     emoji: "🚀",

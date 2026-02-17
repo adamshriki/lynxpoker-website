@@ -36,15 +36,27 @@ function CategoryBadge({ category }: { category: string }) {
 }
 
 interface ContentBlock {
-  type: "paragraph" | "heading" | "list" | "quote" | "divider" | "callout";
+  type: "paragraph" | "heading" | "list" | "quote" | "divider" | "callout" | "comparison-table";
   text?: string;
   items?: string[];
   emoji?: string;
+  level?: number;
+  tableData?: { headers: string[]; rows: string[][] };
 }
 
 function RenderBlock({ block }: { block: ContentBlock }) {
   switch (block.type) {
     case "heading":
+      if (block.level === 3) {
+        return (
+          <motion.h3
+            variants={fadeInUp}
+            className="text-lg font-bold text-text-primary mt-6 mb-3"
+          >
+            {block.text}
+          </motion.h3>
+        );
+      }
       return (
         <motion.h2
           variants={fadeInUp}
@@ -90,6 +102,40 @@ function RenderBlock({ block }: { block: ContentBlock }) {
         >
           <span className="text-2xl shrink-0">{block.emoji || "💡"}</span>
           <p className="text-text-minus-1 leading-relaxed">{block.text}</p>
+        </motion.div>
+      );
+    case "comparison-table":
+      if (!block.tableData) return null;
+      return (
+        <motion.div variants={fadeInUp} className="my-8 overflow-x-auto rounded-xl border border-border-primary">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-surface-secondary">
+                {block.tableData.headers.map((h, i) => (
+                  <th
+                    key={i}
+                    className={`px-4 py-3 font-bold text-text-primary whitespace-nowrap ${i === 0 ? "text-start" : "text-center"} ${i === 1 ? "bg-primary/10" : ""}`}
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.tableData.rows.map((row, ri) => (
+                <tr key={ri} className="border-t border-border-primary hover:bg-surface-secondary/50 transition-colors">
+                  {row.map((cell, ci) => (
+                    <td
+                      key={ci}
+                      className={`px-4 py-2.5 ${ci === 0 ? "text-start font-medium text-text-primary" : "text-center text-text-minus-1"} ${ci === 1 ? "bg-primary/5" : ""}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </motion.div>
       );
     case "divider":

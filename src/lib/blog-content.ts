@@ -3,12 +3,15 @@
  * Each key matches a slug from blog-data.ts.
  * Content is structured as blocks for rich rendering.
  */
+import { comparisonPostEN, comparisonPostHE } from "./blog-content-comparison";
 
 interface ContentBlock {
-  type: "paragraph" | "heading" | "list" | "quote" | "divider" | "callout";
+  type: "paragraph" | "heading" | "list" | "quote" | "divider" | "callout" | "comparison-table";
   text?: string;
   items?: string[];
   emoji?: string;
+  level?: number;
+  tableData?: { headers: string[]; rows: string[][] };
 }
 
 interface BlogContentEntry {
@@ -17,6 +20,10 @@ interface BlogContentEntry {
 }
 
 export const blogContent: Record<string, BlogContentEntry> = {
+  "best-poker-tournament-management-software": {
+    en: comparisonPostEN,
+    he: comparisonPostHE,
+  },
   "introducing-lynxpoker": {
     en: [
       {
