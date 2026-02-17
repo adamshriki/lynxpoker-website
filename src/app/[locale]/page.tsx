@@ -515,8 +515,8 @@ export default function HomePage() {
               <ul className="space-y-2.5">
                 <li><Link href="#" className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("footer.about")}</Link></li>
                 <li><Link href="#" className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("footer.contact")}</Link></li>
-                <li><Link href="#" className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("footer.privacy")}</Link></li>
-                <li><Link href="#" className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("footer.terms")}</Link></li>
+                <li><Link href={`/${locale}/privacy`} className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("footer.privacy")}</Link></li>
+                <li><Link href={`/${locale}/terms`} className="text-sm text-text-minus-1 hover:text-text-primary transition-colors">{t("footer.terms")}</Link></li>
               </ul>
             </div>
           </div>
