@@ -63,10 +63,14 @@ export default function HomePage() {
             >
               <Globe className="w-4.5 h-4.5" />
             </Link>
-            <Button variant="ghost" size="sm">{t("hero.ctaSecondary")}</Button>
-            <Button variant="primary" size="md">
-              {t("nav.startFree")}
-            </Button>
+            <a href="https://app.lynx.poker/signin">
+              <Button variant="ghost" size="sm">Login</Button>
+            </a>
+            <a href="https://app.lynx.poker/signup">
+              <Button variant="primary" size="md">
+                {t("nav.startFree")}
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -119,14 +123,12 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.5 }}
           >
-            <Button variant="primary" size="lg" className="text-base px-8">
-              {t("hero.cta")}
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-base px-8">
-              <Play className="w-5 h-5" />
-              {t("hero.ctaSecondary")}
-            </Button>
+            <a href="https://app.lynx.poker/signup">
+              <Button variant="primary" size="lg" className="text-base px-8">
+                {t("hero.cta")}
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </a>
           </motion.div>
 
           {/* Live Clock Demo */}
@@ -467,10 +469,12 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-text-primary mb-6">{t("cta.title")}</h2>
             <p className="text-lg text-text-minus-1 mb-10">{t("cta.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" size="lg" className="text-base px-10">
-                {t("cta.button")}
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="https://app.lynx.poker/signup">
+                <Button variant="primary" size="lg" className="text-base px-10">
+                  {t("cta.button")}
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
             </div>
             <div className="flex items-center justify-center gap-6 mt-8 text-sm text-text-minus-1">
               <span className="flex items-center gap-1.5"><Check className="w-4 h-4 text-green-400" /> Free tier</span>
