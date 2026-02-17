@@ -182,7 +182,7 @@ export default function BlogPostPage({
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3">
             <img
-              src={`${typeof window !== "undefined" && (window as any).__NEXT_DATA__?.basePath || ""}/logo.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`}
               alt="LynxPoker"
               className="h-8 w-auto"
             />
@@ -293,7 +293,7 @@ export default function BlogPostPage({
         <div className="max-w-4xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <Link href={`/${locale}`} className="flex items-center gap-2">
             <img
-              src={`${typeof window !== "undefined" && (window as any).__NEXT_DATA__?.basePath || ""}/logo.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`}
               alt="LynxPoker"
               className="h-6 w-auto"
             />

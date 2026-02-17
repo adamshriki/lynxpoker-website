@@ -145,7 +145,7 @@ export default function BlogPage() {
       <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border-primary">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3">
-            <img src={`${typeof window !== 'undefined' && (window as any).__NEXT_DATA__?.basePath || ''}/logo.svg`} alt="LynxPoker" className="h-8 w-auto" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-8 w-auto" />
           </Link>
           <Link
             href={`/${locale}`}
@@ -219,7 +219,7 @@ export default function BlogPage() {
       <footer className="border-t border-border-primary bg-surface-primary">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <Link href={`/${locale}`} className="flex items-center gap-2">
-            <img src={`${typeof window !== 'undefined' && (window as any).__NEXT_DATA__?.basePath || ''}/logo.svg`} alt="LynxPoker" className="h-6 w-auto" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-6 w-auto" />
           </Link>
           <p className="text-xs text-text-minus-2">© 2026 LynxPoker. All rights reserved.</p>
         </div>
