@@ -164,8 +164,8 @@ export default function PrivacyPolicy() {
         <Section n="13" title="Contact Information">
           <div className="bg-surface-plus-1 border border-border-primary rounded-xl p-5 mt-2">
             <p className="font-bold text-text-primary">Adam Shriki LTD</p>
-            <p className="text-text-secondary text-sm">Company No. 515963320<br />[Registered Address]<br />Israel</p>
-            <p className="text-text-secondary text-sm mt-2">Email: <a href="mailto:privacy@lynxpoker.com" className="text-text-blue-primary hover:underline">privacy@lynxpoker.com</a></p>
+            <p className="text-text-secondary text-sm">Company No. 515963320<br />Rozvelt 9, Ashdod, 7766209<br />Israel</p>
+            <p className="text-text-secondary text-sm mt-2">Email: <a href="mailto:adam@lynx.poker" className="text-text-blue-primary hover:underline">adam@lynx.poker</a></p>
           </div>
           <p className="text-sm text-text-minus-1 mt-3">EU/UK residents may also lodge a complaint with their local Data Protection Authority.</p>
         </Section>

@@ -271,10 +271,10 @@ All legal notices under these Terms shall be directed to:
 
 **Adam Shriki LTD**
 Company No. 515963320
-[Registered Address]
+Rozvelt 9, Ashdod, 7766209
 Israel
 
-**Email:** [legal@lynxpoker.com]
+**Email:** [adam@lynx.poker]
 
 Notices to the Customer shall be sent to the email address associated with the Customer's account.
 

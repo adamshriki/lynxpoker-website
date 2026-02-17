@@ -267,10 +267,10 @@ For privacy inquiries, data subject requests, or complaints:
 
 **Adam Shriki LTD**
 Company No. 515963320
-[Registered Address]
+Rozvelt 9, Ashdod, 7766209
 Israel
 
-**Email:** [privacy@lynxpoker.com]
+**Email:** [adam@lynx.poker]
 
 For EU/UK residents, you also have the right to lodge a complaint with your local Data Protection Authority.
 
