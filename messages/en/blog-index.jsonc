@@ -1,0 +1,32 @@
+{
+  // Blog post metadata for the blog index page and post headers
+  // Each post has: title, excerpt, date, readTime
+  "posts": {
+    "best-poker-tournament-management-software": {
+      // SEO-optimized title targeting "poker tournament management" keyword
+      "title": "The 5 Best Poker Tournament Management Tools in 2026",
+      "excerpt": "Looking for the best poker tournament management software? We compare the top 5 tools — from free tournament clocks to full-featured platforms with dealer management, mystery bounty support, and real-time sync.",
+      "date": "Feb 17, 2026",
+      "readTime": "12 min read"
+    },
+    "introducing-lynxpoker": {
+      // Keep "LynxPoker" untranslated in the title
+      "title": "Introducing LynxPoker: Professional Tournament Management for Everyone",
+      "excerpt": "We built LynxPoker because running a poker tournament shouldn't require enterprise software or a spreadsheet PhD. Here's our story and what makes us different.",
+      "date": "Feb 15, 2026",
+      "readTime": "5 min read"
+    },
+    "dealer-management-guide": {
+      "title": "The Complete Guide to Dealer Management in Poker Tournaments",
+      "excerpt": "Managing dealers is one of the biggest challenges in running multi-table tournaments. Learn how to schedule rotations, handle breaks, and keep your floor running smoothly.",
+      "date": "Feb 10, 2026",
+      "readTime": "8 min read"
+    },
+    "home-game-to-club": {
+      "title": "From Home Game to Poker Club: Scaling Your Tournament Operations",
+      "excerpt": "Your weekly home game is growing. More players, more tables, more logistics. Here's how to make the leap from casual to professional without losing the fun.",
+      "date": "Feb 5, 2026",
+      "readTime": "6 min read"
+    }
+  }
+}

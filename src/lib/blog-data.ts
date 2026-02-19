@@ -1,107 +1,38 @@
-export interface BlogPost {
+/**
+ * Blog posts registry — static metadata only.
+ * Translated titles/excerpts come from messages/[locale]/blog-index.jsonc
+ * Content blocks come from messages/[locale]/blog-{slug}.jsonc
+ */
+export interface BlogPostMeta {
   slug: string;
   category: string;
   emoji: string;
-  dateISO: string; // for sorting
-  en: {
-    title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-  };
-  he: {
-    title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-  };
+  dateISO: string;
 }
 
-/**
- * Blog posts registry.
- * Add new posts here — they'll appear automatically on the blog index page.
- * For the actual post content, create a page at /blog/[slug]/page.tsx
- * or use MDX files in the future.
- */
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPostMeta[] = [
   {
     slug: "best-poker-tournament-management-software",
     category: "industry",
     emoji: "🏆",
     dateISO: "2026-02-17",
-    en: {
-      title: "The 5 Best Poker Tournament Management Tools in 2026",
-      excerpt:
-        "Looking for the best poker tournament management software? We compare the top 5 tools — from free tournament clocks to full-featured platforms with dealer management, mystery bounty support, and real-time sync.",
-      date: "Feb 17, 2026",
-      readTime: "12 min read",
-    },
-    he: {
-      title: "5 כלי ניהול טורנירי הפוקר הטובים ביותר ב-2026",
-      excerpt:
-        "מחפשים את התוכנה הטובה ביותר לניהול טורנירי פוקר? אנחנו משווים את 5 הכלים המובילים — משעוני טורניר חינמיים ועד פלטפורמות מלאות עם ניהול דילרים, תמיכה במיסטרי באונטי וסנכרון בזמן אמת.",
-      date: "17 בפברואר 2026",
-      readTime: "12 דק׳ קריאה",
-    },
   },
   {
     slug: "introducing-lynxpoker",
     category: "product",
     emoji: "🚀",
     dateISO: "2026-02-15",
-    en: {
-      title: "Introducing LynxPoker: Professional Tournament Management for Everyone",
-      excerpt:
-        "We built LynxPoker because running a poker tournament shouldn't require enterprise software or a spreadsheet PhD. Here's our story and what makes us different.",
-      date: "Feb 15, 2026",
-      readTime: "5 min read",
-    },
-    he: {
-      title: "הכירו את LynxPoker: ניהול טורנירי פוקר מקצועי לכולם",
-      excerpt:
-        "בנינו את LynxPoker כי ניהול טורניר פוקר לא צריך לדרוש תוכנה ארגונית או דוקטורט באקסל. הנה הסיפור שלנו ומה שמבדיל אותנו.",
-      date: "15 בפברואר 2026",
-      readTime: "5 דק׳ קריאה",
-    },
   },
   {
     slug: "dealer-management-guide",
     category: "guides",
     emoji: "🃏",
     dateISO: "2026-02-10",
-    en: {
-      title: "The Complete Guide to Dealer Management in Poker Tournaments",
-      excerpt:
-        "Managing dealers is one of the biggest challenges in running multi-table tournaments. Learn how to schedule rotations, handle breaks, and keep your floor running smoothly.",
-      date: "Feb 10, 2026",
-      readTime: "8 min read",
-    },
-    he: {
-      title: "המדריך המלא לניהול דילרים בטורנירי פוקר",
-      excerpt:
-        "ניהול דילרים הוא אחד האתגרים הגדולים בטורנירים מרובי שולחנות. למדו איך לתכנן רוטציות, לנהל הפסקות ולשמור על המשחק זורם.",
-      date: "10 בפברואר 2026",
-      readTime: "8 דק׳ קריאה",
-    },
   },
   {
     slug: "home-game-to-club",
     category: "tips",
     emoji: "🏠",
     dateISO: "2026-02-05",
-    en: {
-      title: "From Home Game to Poker Club: Scaling Your Tournament Operations",
-      excerpt:
-        "Your weekly home game is growing. More players, more tables, more logistics. Here's how to make the leap from casual to professional without losing the fun.",
-      date: "Feb 5, 2026",
-      readTime: "6 min read",
-    },
-    he: {
-      title: "ממשחק ביתי למועדון פוקר: איך להרחיב את הטורנירים שלכם",
-      excerpt:
-        "המשחק הביתי השבועי שלכם גדל. יותר שחקנים, יותר שולחנות, יותר לוגיסטיקה. הנה איך לעשות את הקפיצה מחובבני למקצועי בלי לאבד את הכיף.",
-      date: "5 בפברואר 2026",
-      readTime: "6 דק׳ קריאה",
-    },
   },
 ];

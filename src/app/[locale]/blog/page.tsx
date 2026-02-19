@@ -1,11 +1,10 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations, useLocale, useMessages } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Clock, Tag, ChevronLeft } from "lucide-react";
-import { blogPosts, type BlogPost } from "@/lib/blog-data";
+import { blogPosts, type BlogPostMeta } from "@/lib/blog-data";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -33,9 +32,16 @@ function CategoryBadge({ category }: { category: string }) {
   );
 }
 
-function FeaturedPost({ post, locale }: { post: BlogPost; locale: string }) {
+interface PostTranslation {
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+}
+
+function FeaturedPost({ post, translation }: { post: BlogPostMeta; translation: PostTranslation }) {
   const t = useTranslations("blog");
-  const p = locale === "he" ? post.he : post.en;
+  const locale = useLocale();
 
   return (
     <motion.article variants={fadeInUp}>
@@ -44,7 +50,6 @@ function FeaturedPost({ post, locale }: { post: BlogPost; locale: string }) {
         className="group block relative overflow-hidden rounded-2xl border border-border-primary bg-gradient-to-br from-surface-primary to-surface-secondary hover:border-primary/50 transition-all duration-300"
       >
         <div className="grid md:grid-cols-2 gap-0">
-          {/* Image */}
           <div className="relative aspect-[16/10] md:aspect-auto overflow-hidden bg-surface-secondary">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/5 flex items-center justify-center">
               <div className="text-6xl opacity-40 group-hover:scale-110 transition-transform duration-500">
@@ -52,23 +57,22 @@ function FeaturedPost({ post, locale }: { post: BlogPost; locale: string }) {
               </div>
             </div>
           </div>
-          {/* Content */}
           <div className="p-8 md:p-10 flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-4">
               <CategoryBadge category={post.category} />
               <span className="flex items-center gap-1 text-xs text-text-minus-2">
                 <Clock className="w-3 h-3" />
-                {p.readTime}
+                {translation.readTime}
               </span>
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
-              {p.title}
+              {translation.title}
             </h2>
             <p className="text-text-minus-1 mb-6 line-clamp-3 leading-relaxed">
-              {p.excerpt}
+              {translation.excerpt}
             </p>
             <div className="flex items-center justify-between">
-              <time className="text-sm text-text-minus-2">{p.date}</time>
+              <time className="text-sm text-text-minus-2">{translation.date}</time>
               <span className="flex items-center gap-1 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
                 {t("readMore")} <ArrowRight className="w-4 h-4" />
               </span>
@@ -80,9 +84,9 @@ function FeaturedPost({ post, locale }: { post: BlogPost; locale: string }) {
   );
 }
 
-function PostCard({ post, locale }: { post: BlogPost; locale: string }) {
+function PostCard({ post, translation }: { post: BlogPostMeta; translation: PostTranslation }) {
   const t = useTranslations("blog");
-  const p = locale === "he" ? post.he : post.en;
+  const locale = useLocale();
 
   return (
     <motion.article variants={fadeInUp}>
@@ -90,7 +94,6 @@ function PostCard({ post, locale }: { post: BlogPost; locale: string }) {
         href={`/${locale}/blog/${post.slug}`}
         className="group flex flex-col h-full rounded-xl border border-border-primary bg-surface-primary hover:border-primary/40 hover:bg-surface-secondary transition-all duration-300 overflow-hidden"
       >
-        {/* Thumbnail area */}
         <div className="relative aspect-[16/9] overflow-hidden bg-surface-secondary">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 flex items-center justify-center">
             <div className="text-5xl opacity-30 group-hover:scale-110 transition-transform duration-500">
@@ -98,23 +101,22 @@ function PostCard({ post, locale }: { post: BlogPost; locale: string }) {
             </div>
           </div>
         </div>
-        {/* Content */}
         <div className="p-6 flex flex-col flex-1">
           <div className="flex items-center gap-3 mb-3">
             <CategoryBadge category={post.category} />
             <span className="flex items-center gap-1 text-xs text-text-minus-2">
               <Clock className="w-3 h-3" />
-              {p.readTime}
+              {translation.readTime}
             </span>
           </div>
           <h3 className="text-lg font-bold text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-2">
-            {p.title}
+            {translation.title}
           </h3>
           <p className="text-sm text-text-minus-1 mb-4 line-clamp-3 flex-1 leading-relaxed">
-            {p.excerpt}
+            {translation.excerpt}
           </p>
           <div className="flex items-center justify-between pt-4 border-t border-border-primary">
-            <time className="text-xs text-text-minus-2">{p.date}</time>
+            <time className="text-xs text-text-minus-2">{translation.date}</time>
             <span className="flex items-center gap-1 text-primary font-semibold text-xs group-hover:gap-2 transition-all">
               {t("readMore")} <ArrowRight className="w-3.5 h-3.5" />
             </span>
@@ -128,7 +130,8 @@ function PostCard({ post, locale }: { post: BlogPost; locale: string }) {
 export default function BlogPage() {
   const t = useTranslations("blog");
   const locale = useLocale();
-  const isRtl = locale === "he";
+  const messages = useMessages();
+  const postTranslations = (messages.blogPosts || {}) as Record<string, PostTranslation>;
 
   const sorted = [...blogPosts].sort(
     (a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime()
@@ -136,12 +139,8 @@ export default function BlogPage() {
   const featured = sorted[0];
   const rest = sorted.slice(1);
 
-  // Unique categories
-  const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
-
   return (
     <div className="min-h-screen bg-background text-text-primary">
-      {/* Navbar */}
       <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border-primary">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3">
@@ -151,7 +150,7 @@ export default function BlogPage() {
             href={`/${locale}`}
             className="flex items-center gap-1 text-sm text-text-minus-1 hover:text-text-primary transition-colors"
           >
-            {isRtl ? (
+            {locale === "he" ? (
               <>
                 {t("backHome")} <ArrowRight className="w-4 h-4 rotate-180" />
               </>
@@ -164,7 +163,6 @@ export default function BlogPage() {
         </div>
       </nav>
 
-      {/* Header */}
       <motion.section
         initial="hidden"
         animate="visible"
@@ -182,11 +180,11 @@ export default function BlogPage() {
           </p>
         </motion.div>
 
-        {/* Featured Post */}
-        {featured && <FeaturedPost post={featured} locale={locale} />}
+        {featured && postTranslations[featured.slug] && (
+          <FeaturedPost post={featured} translation={postTranslations[featured.slug]} />
+        )}
       </motion.section>
 
-      {/* Posts Grid */}
       {rest.length > 0 && (
         <motion.section
           initial="hidden"
@@ -199,14 +197,15 @@ export default function BlogPage() {
             {t("allPosts")}
           </motion.h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map((post) => (
-              <PostCard key={post.slug} post={post} locale={locale} />
-            ))}
+            {rest.map((post) =>
+              postTranslations[post.slug] ? (
+                <PostCard key={post.slug} post={post} translation={postTranslations[post.slug]} />
+              ) : null
+            )}
           </div>
         </motion.section>
       )}
 
-      {/* Empty state */}
       {blogPosts.length === 0 && (
         <div className="max-w-6xl mx-auto px-6 py-24 text-center">
           <div className="text-6xl mb-6">📝</div>
@@ -215,7 +214,6 @@ export default function BlogPage() {
         </div>
       )}
 
-      {/* Footer */}
       <footer className="border-t border-border-primary bg-surface-primary">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <Link href={`/${locale}`} className="flex items-center gap-2">

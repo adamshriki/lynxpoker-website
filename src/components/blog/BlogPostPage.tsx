@@ -1,11 +1,10 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations, useLocale, useMessages } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, Tag, ChevronLeft } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
-import { blogContent } from "@/lib/blog-content";
 import { notFound } from "next/navigation";
 import { use } from "react";
 
@@ -36,41 +35,31 @@ function CategoryBadge({ category }: { category: string }) {
 }
 
 interface ContentBlock {
-  type: "paragraph" | "heading" | "list" | "quote" | "divider" | "callout" | "comparison-table";
+  type: string;
   text?: string;
   items?: string[];
   emoji?: string;
-  level?: number;
-  tableData?: { headers: string[]; rows: string[][] };
+  headers?: string[];
+  rows?: string[][];
 }
 
 function RenderBlock({ block }: { block: ContentBlock }) {
   switch (block.type) {
     case "heading":
-      if (block.level === 3) {
-        return (
-          <motion.h3
-            variants={fadeInUp}
-            className="text-lg font-bold text-text-primary mt-6 mb-3"
-          >
-            {block.text}
-          </motion.h3>
-        );
-      }
       return (
-        <motion.h2
-          variants={fadeInUp}
-          className="text-2xl font-bold text-text-primary mt-10 mb-4"
-        >
+        <motion.h2 variants={fadeInUp} className="text-2xl font-bold text-text-primary mt-10 mb-4">
           {block.text}
         </motion.h2>
       );
+    case "heading_h3":
+      return (
+        <motion.h3 variants={fadeInUp} className="text-lg font-bold text-text-primary mt-6 mb-3">
+          {block.text}
+        </motion.h3>
+      );
     case "paragraph":
       return (
-        <motion.p
-          variants={fadeInUp}
-          className="text-text-minus-1 leading-relaxed mb-5"
-        >
+        <motion.p variants={fadeInUp} className="text-text-minus-1 leading-relaxed mb-5">
           {block.text}
         </motion.p>
       );
@@ -87,48 +76,36 @@ function RenderBlock({ block }: { block: ContentBlock }) {
       );
     case "quote":
       return (
-        <motion.blockquote
-          variants={fadeInUp}
-          className="border-s-4 border-primary/50 ps-6 py-3 my-8 bg-primary/5 rounded-e-lg"
-        >
+        <motion.blockquote variants={fadeInUp} className="border-s-4 border-primary/50 ps-6 py-3 my-8 bg-primary/5 rounded-e-lg">
           <p className="text-text-minus-1 italic leading-relaxed">{block.text}</p>
         </motion.blockquote>
       );
     case "callout":
       return (
-        <motion.div
-          variants={fadeInUp}
-          className="flex gap-4 p-5 my-8 rounded-xl bg-surface-secondary border border-border-primary"
-        >
+        <motion.div variants={fadeInUp} className="flex gap-4 p-5 my-8 rounded-xl bg-surface-secondary border border-border-primary">
           <span className="text-2xl shrink-0">{block.emoji || "💡"}</span>
           <p className="text-text-minus-1 leading-relaxed">{block.text}</p>
         </motion.div>
       );
-    case "comparison-table":
-      if (!block.tableData) return null;
+    case "comparison_table":
+      if (!block.headers || !block.rows) return null;
       return (
         <motion.div variants={fadeInUp} className="my-8 overflow-x-auto rounded-xl border border-border-primary">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-surface-secondary">
-                {block.tableData.headers.map((h, i) => (
-                  <th
-                    key={i}
-                    className={`px-4 py-3 font-bold text-text-primary whitespace-nowrap ${i === 0 ? "text-start" : "text-center"} ${i === 1 ? "bg-primary/10" : ""}`}
-                  >
+                {block.headers.map((h: string, i: number) => (
+                  <th key={i} className={`px-4 py-3 font-bold text-text-primary whitespace-nowrap ${i === 0 ? "text-start" : "text-center"} ${i === 1 ? "bg-primary/10" : ""}`}>
                     {h}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {block.tableData.rows.map((row, ri) => (
+              {block.rows.map((row: string[], ri: number) => (
                 <tr key={ri} className="border-t border-border-primary hover:bg-surface-secondary/50 transition-colors">
-                  {row.map((cell, ci) => (
-                    <td
-                      key={ci}
-                      className={`px-4 py-2.5 ${ci === 0 ? "text-start font-medium text-text-primary" : "text-center text-text-minus-1"} ${ci === 1 ? "bg-primary/5" : ""}`}
-                    >
+                  {row.map((cell: string, ci: number) => (
+                    <td key={ci} className={`px-4 py-2.5 ${ci === 0 ? "text-start font-medium text-text-primary" : "text-center text-text-minus-1"} ${ci === 1 ? "bg-primary/5" : ""}`}>
                       {cell}
                     </td>
                   ))}
@@ -139,9 +116,7 @@ function RenderBlock({ block }: { block: ContentBlock }) {
         </motion.div>
       );
     case "divider":
-      return (
-        <motion.hr variants={fadeInUp} className="border-border-primary my-10" />
-      );
+      return <motion.hr variants={fadeInUp} className="border-border-primary my-10" />;
     default:
       return null;
   }
@@ -154,18 +129,18 @@ export default function BlogPostPage({
 }) {
   const { locale, slug } = use(params);
   const t = useTranslations("blog");
+  const messages = useMessages();
   const isRtl = locale === "he";
 
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const content = blogContent[slug];
-  const blocks: ContentBlock[] = content
-    ? locale === "he"
-      ? content.he
-      : content.en
-    : [];
-  const meta = locale === "he" ? post.he : post.en;
+  const postTranslations = (messages.blogPosts || {}) as Record<string, any>;
+  const meta = postTranslations[slug];
+  if (!meta) notFound();
+
+  const blogContent = (messages.blogContent || {}) as Record<string, ContentBlock[]>;
+  const blocks: ContentBlock[] = blogContent[slug] || [];
 
   // Find prev/next posts
   const sorted = [...blogPosts].sort(
@@ -177,41 +152,26 @@ export default function BlogPostPage({
 
   return (
     <div className="min-h-screen bg-background text-text-primary">
-      {/* Navbar */}
       <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border-primary">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3">
-            <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`}
-              alt="LynxPoker"
-              className="h-8 w-auto"
-            />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-8 w-auto" />
           </Link>
           <Link
             href={`/${locale}/blog`}
             className="flex items-center gap-1.5 text-sm text-text-minus-1 hover:text-text-primary transition-colors"
           >
             {isRtl ? (
-              <>
-                {t("allPosts")} <ArrowRight className="w-4 h-4" />
-              </>
+              <>{t("allPosts")} <ArrowRight className="w-4 h-4" /></>
             ) : (
-              <>
-                <ChevronLeft className="w-4 h-4" /> {t("allPosts")}
-              </>
+              <><ChevronLeft className="w-4 h-4" /> {t("allPosts")}</>
             )}
           </Link>
         </div>
       </nav>
 
-      {/* Article */}
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-20">
-        <motion.header
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          className="mb-12"
-        >
+        <motion.header initial="hidden" animate="visible" variants={stagger} className="mb-12">
           <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-3 mb-6">
             <CategoryBadge category={post.category} />
             <span className="flex items-center gap-1.5 text-sm text-text-minus-2">
@@ -222,38 +182,27 @@ export default function BlogPostPage({
             <time className="text-sm text-text-minus-2">{meta.date}</time>
           </motion.div>
 
-          <motion.h1
-            variants={fadeInUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6"
-          >
+          <motion.h1 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             <span className="bg-gradient-to-r from-text-primary via-text-primary to-primary/80 bg-clip-text text-transparent">
               {meta.title}
             </span>
           </motion.h1>
 
-          <motion.p
-            variants={fadeInUp}
-            className="text-lg text-text-minus-1 leading-relaxed"
-          >
+          <motion.p variants={fadeInUp} className="text-lg text-text-minus-1 leading-relaxed">
             {meta.excerpt}
           </motion.p>
 
-          <motion.div
-            variants={fadeInUp}
-            className="mt-10 border-b border-border-primary"
-          />
+          <motion.div variants={fadeInUp} className="mt-10 border-b border-border-primary" />
         </motion.header>
 
-        {/* Content */}
         <motion.div initial="hidden" animate="visible" variants={stagger}>
           {blocks.map((block, i) => (
             <RenderBlock key={i} block={block} />
           ))}
         </motion.div>
 
-        {/* Post navigation */}
         <div className="mt-16 pt-8 border-t border-border-primary grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {prevPost ? (
+          {prevPost && postTranslations[prevPost.slug] ? (
             <Link
               href={`/${locale}/blog/${prevPost.slug}`}
               className="group flex flex-col p-5 rounded-xl border border-border-primary hover:border-primary/40 hover:bg-surface-secondary transition-all"
@@ -263,13 +212,11 @@ export default function BlogPostPage({
                 {isRtl ? "הפוסט הקודם" : "Previous"}
               </span>
               <span className="text-sm font-semibold text-text-primary group-hover:text-primary transition-colors line-clamp-1">
-                {(locale === "he" ? prevPost.he : prevPost.en).title}
+                {postTranslations[prevPost.slug].title}
               </span>
             </Link>
-          ) : (
-            <div />
-          )}
-          {nextPost ? (
+          ) : <div />}
+          {nextPost && postTranslations[nextPost.slug] ? (
             <Link
               href={`/${locale}/blog/${nextPost.slug}`}
               className="group flex flex-col items-end text-end p-5 rounded-xl border border-border-primary hover:border-primary/40 hover:bg-surface-secondary transition-all"
@@ -279,24 +226,17 @@ export default function BlogPostPage({
                 {isRtl ? <ArrowLeft className="w-3 h-3" /> : <ArrowRight className="w-3 h-3" />}
               </span>
               <span className="text-sm font-semibold text-text-primary group-hover:text-primary transition-colors line-clamp-1">
-                {(locale === "he" ? nextPost.he : nextPost.en).title}
+                {postTranslations[nextPost.slug].title}
               </span>
             </Link>
-          ) : (
-            <div />
-          )}
+          ) : <div />}
         </div>
       </article>
 
-      {/* Footer */}
       <footer className="border-t border-border-primary bg-surface-primary">
         <div className="max-w-4xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <Link href={`/${locale}`} className="flex items-center gap-2">
-            <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`}
-              alt="LynxPoker"
-              className="h-6 w-auto"
-            />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.svg`} alt="LynxPoker" className="h-6 w-auto" />
           </Link>
           <p className="text-xs text-text-minus-2">© 2026 LynxPoker. All rights reserved.</p>
         </div>

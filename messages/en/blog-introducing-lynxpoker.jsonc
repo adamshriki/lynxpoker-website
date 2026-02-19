@@ -1,0 +1,135 @@
+{
+  // Blog post: "Introducing LynxPoker" - company launch announcement
+  // Keep "LynxPoker" brand name untranslated throughout
+  // Poker terms (blind structure, buy-in, cash game, etc.) should use standard poker terminology in target language
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Running a poker tournament should be exciting — not stressful. Yet for years, tournament directors have been stuck choosing between clunky desktop software that doesn't sync, overpriced enterprise platforms, or cobbling together spreadsheets and timer apps. We built LynxPoker to change that."
+    },
+    {
+      "type": "heading",
+      "text": "The Problem We Saw"
+    },
+    {
+      "type": "paragraph",
+      "text": "We've spent years in the poker industry, both playing and organizing tournaments. The same pain points kept coming up at every level — from weekly home games to multi-day festivals with hundreds of players."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Timer apps handle the clock but nothing else. No player tracking, no dealer coordination, no multi-device sync.",
+        "Legacy desktop software requires installation, doesn't work on mobile, and crashes at the worst possible time.",
+        // "PokerTDA" and "BPS" are product names - keep untranslated
+        "Enterprise platforms like PokerTDA or BPS cost hundreds per month and are designed for massive casino operations — overkill for 95% of organizers.",
+        "The \"spreadsheet approach\" works until it doesn't. One wrong formula and your prize pool calculations are off."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "We wanted a platform that a home game host and a festival director could both love — professional enough for the big stage, simple enough to set up in minutes."
+    },
+    {
+      "type": "heading",
+      "text": "What Makes LynxPoker Different"
+    },
+    {
+      "type": "paragraph",
+      // Keep "LynxPoker" untranslated
+      "text": "LynxPoker is a cloud-first tournament management platform built for the modern poker world. Here's what sets us apart:"
+    },
+    {
+      "type": "heading_h3",
+      "text": "Real-Time Sync Across Every Device"
+    },
+    {
+      "type": "paragraph",
+      // "WhatsApp" is a brand name - keep untranslated
+      "text": "When you update the blind level, register a player, or assign a dealer — every connected device sees the change instantly. Your floor managers, dealers, and display screens are always showing the same information. No more shouting across the room or sending WhatsApp messages to coordinate."
+    },
+    {
+      "type": "heading_h3",
+      // Humorous heading - translate the humor naturally
+      "text": "Dealer Management (Finally)"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the feature we're most proud of. At our price point, no other platform offers comprehensive dealer management. Track assignments, rotations, breaks, and schedules. Your dealers get their own app interface showing exactly where they need to be and when."
+    },
+    {
+      "type": "callout",
+      "emoji": "🃏",
+      // "Fun fact" is a casual tone marker
+      "text": "Fun fact: Dealer coordination is the #1 operational challenge cited by tournament directors running events with 5+ tables. It's also the feature most competitors completely ignore."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Purpose-Built Mobile Apps"
+    },
+    {
+      "type": "paragraph",
+      // "Floor App" and "Dealer App" are product names
+      "text": "We didn't just make a responsive website and call it a day. LynxPoker includes dedicated Floor App and Dealer App experiences designed specifically for staff workflows during live tournaments. The right information, at the right time, on the device that's actually in your hand."
+    },
+    {
+      "type": "heading_h3",
+      // "RTL" = Right-to-Left, a technical term for Hebrew/Arabic text direction
+      "text": "Hebrew & RTL — Native, Not an Afterthought"
+    },
+    {
+      "type": "paragraph",
+      // When translating to Hebrew: this section is about Hebrew support, adjust the tone to be proud/relevant
+      "text": "The Israeli poker scene is thriving, and it deserves tools that speak its language. LynxPoker is built from the ground up with full Hebrew support and right-to-left layout. This isn't a translation layer bolted on top — it's baked into every component."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "Our Pricing Philosophy"
+    },
+    {
+      "type": "paragraph",
+      // Keep dollar amounts as-is
+      "text": "We believe professional tournament tools shouldn't require an enterprise budget. LynxPoker offers a generous free tier for small games, with club plans starting at $29/month. No hidden fees, no contracts, no per-player charges that make your costs unpredictable."
+    },
+    {
+      "type": "paragraph",
+      // Keep "$200-500+/month" as-is
+      "text": "Compare that to the alternatives: free timer apps that can't do anything beyond countdown, or enterprise platforms charging $200-500+/month. We sit right in the sweet spot — professional features at a price that makes sense for independent clubs and organizers."
+    },
+    {
+      "type": "heading",
+      "text": "What's Next"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is just the beginning. We're actively developing new features based on feedback from our early users. Here's a taste of what's coming:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Advanced tournament statistics and analytics dashboard",
+        "Player leaderboards and season standings",
+        "Integration with popular payment processors for buy-in collection",
+        "Multi-language expansion beyond English and Hebrew",
+        // "OBS" is a software name (Open Broadcaster Software) - keep untranslated
+        "Tournament streaming overlays (OBS integration)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Try It Free"
+    },
+    {
+      "type": "paragraph",
+      "text": "We built LynxPoker for tournament directors who care about running great events. Whether you host a monthly home game or manage a multi-room poker club, we'd love for you to try it. Sign up for free — no credit card required — and see the difference a modern platform makes."
+    },
+    {
+      "type": "callout",
+      "emoji": "🚀",
+      // "lynx.poker" is a URL - keep untranslated
+      "text": "Ready to level up your tournaments? Start free at lynx.poker and run your first tournament in under 5 minutes."
+    }
+  ]
+}

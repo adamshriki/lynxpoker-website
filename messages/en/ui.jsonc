@@ -1,5 +1,6 @@
 {
   "metadata": {
+    // Page title shown in browser tab - keep "LynxPoker" brand name untranslated
     "title": "LynxPoker — Professional Poker Tournament Management",
     "description": "Run professional poker tournaments from anywhere. Real-time sync, dealer management, player tracking. Start free today."
   },
@@ -12,6 +13,7 @@
     "watchDemo": "Watch Demo"
   },
   "hero": {
+    // Main headline on the landing page - keep punchy and compelling
     "title": "Professional poker tournaments, anywhere",
     "subtitle": "The modern platform for tournament directors, floor managers, and dealers. Real-time sync across all devices. Start free in minutes.",
     "cta": "Start Free",
@@ -19,6 +21,7 @@
   },
   "socialProof": {
     "trusted": "Trusted by poker clubs worldwide",
+    // These are labels that appear after a number, e.g. "1,200 tournaments managed"
     "tournaments": "tournaments managed",
     "players": "players tracked",
     "countries": "countries"
@@ -28,17 +31,20 @@
     "items": [
       "Desktop software that won't sync",
       "Spreadsheets for player tracking",
+      // "Shouting across the room" is a humorous pain point - translate the humor naturally
       "Shouting across the room to your dealers",
       "Manual blind level management",
       "No mobile access during tournaments"
     ]
   },
   "solution": {
+    // "The LynxPoker Way" - keep "LynxPoker" untranslated
     "title": "The LynxPoker Way",
     "items": [
       "Cloud platform that syncs in real-time",
       "Complete player database with history",
       "Dealer app for seamless coordination",
+      // "Blind structure" is a poker term - use the standard poker terminology in the target language
       "Automated blind structure management",
       "Full control from your phone or tablet"
     ]
@@ -48,6 +54,7 @@
     "subtitle": "Run professional tournaments with confidence",
     "tournament": {
       "title": "Complete Tournament Control",
+      // Poker terms: blind structures, breaks, late registration, prizes - use standard poker terminology
       "description": "Blind structures, breaks, late registration, prizes — everything in one place. Automated level progression with customizable announcements."
     },
     "sync": {
@@ -56,6 +63,7 @@
     },
     "players": {
       "title": "Know Your Players",
+      // Poker terms: buy-ins, cashes - use standard poker terminology
       "description": "Track player history, buy-ins, cashes, and statistics across all tournaments. Build your community with persistent player profiles."
     },
     "dealers": {
@@ -64,6 +72,7 @@
     },
     "mobile": {
       "title": "Purpose-Built Apps",
+      // "Floor App" and "Dealer App" are product names - keep them in English or transliterate
       "description": "Dedicated Floor App and Dealer App designed for staff workflows. Not just responsive web — real native experiences."
     },
     "multiOrg": {
@@ -80,9 +89,11 @@
     },
     "home": {
       "title": "For Home Games",
+      // "timer apps" refers to basic free poker clock apps
       "description": "Upgrade from timer apps. Track your regular players and run tournaments like a pro."
     },
     "charity": {
+      // "Poker Festivals" = multi-day poker events with many tournaments
       "title": "For Poker Festivals",
       "description": "Manage multiple concurrent tournaments, coordinate dozens of dealers, and deliver a seamless experience across all tables and stages."
     }
@@ -95,6 +106,7 @@
     },
     "step2": {
       "title": "Run Your Tournament",
+      // Keep "LynxPoker" untranslated
       "description": "Start the clock, register players, and let LynxPoker handle the rest. Your team stays in sync automatically."
     },
     "step3": {
@@ -104,6 +116,7 @@
   },
   "pricing": {
     "title": "Simple, transparent pricing",
+    // Keep "$29/month" as-is (dollar amount)
     "subtitle": "Free tier for small games. Club plans from $29/month. No hidden fees, no contracts.",
     "cta": "See pricing"
   },
@@ -114,6 +127,7 @@
   },
   "blog": {
     "title": "Blog",
+    // "LynxPoker team" - keep "LynxPoker" untranslated
     "subtitle": "Insights, guides, and updates from the LynxPoker team",
     "allPosts": "All Posts",
     "readMore": "Read more",
@@ -139,6 +153,7 @@
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
+    // Keep "LynxPoker" untranslated, keep © symbol and year
     "copyright": "© 2026 LynxPoker. All rights reserved."
   }
 }
