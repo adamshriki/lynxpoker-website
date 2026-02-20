@@ -1,10 +1,10 @@
 {
   // Blog post: "The 5 Best Poker Tournament Management Tools in 2026"
   // SEO-optimized comparison article
-  // Keep all product/brand names untranslated: LynxPoker, Blind Valet, The Tournament Director, The Poker Timer, LetsPoker, PokerStars, PokerTDA, WhatsApp, OBS
-  // Keep URLs untranslated: lynx.poker, FreePokClock.com
+  // Keep all product/brand names untranslated: LynxPoker, Blind Valet, The Tournament Director, Ultimate Holdem Timer, LetsPoker, PokerStars, WhatsApp
+  // Keep URLs untranslated: lynx.poker, ultimate-holdem-timer.com, thetournamentdirector.net
   // Poker terms should use standard poker terminology in the target language: blind structure, buy-in, re-buy, add-on, payout, mystery bounty, multi-table tournament
-  // Keep dollar amounts as-is: $29/month, $200-500+/month, ~$40
+  // Keep dollar amounts as-is: $29/month, $200+/month, ~$40
   // Keep emoji as-is
   // "RTL" = Right-to-Left text direction for Hebrew/Arabic
   "blocks": [
@@ -19,7 +19,7 @@
     {
       "type": "callout",
       "emoji": "⏱️",
-      "text": "Short on time? LynxPoker offers the best balance of features and price — real-time sync, dealer management, mystery bounty support, and Hebrew/RTL — starting free. Skip to the comparison table below."
+      "text": "Short on time? LynxPoker offers the best balance of features and value — blazing-fast real-time sync, stunning UI, built-in dealer management, mystery bounty support, and Hebrew/RTL — starting completely free. Skip to the comparison table below."
     },
     {
       "type": "divider"
@@ -35,17 +35,15 @@
     {
       "type": "list",
       "items": [
-        "Tournament Clock & Blind Management — The foundation. Automated blind level progression, customizable structures, break scheduling, and clear display for players.",
-        "Player Tracking & Registration — Managing buy-ins, re-buys, add-ons, eliminations, and maintaining a player database across tournaments.",
-        "Real-Time Multi-Device Sync — Can multiple staff members manage the same tournament simultaneously? Do changes sync instantly across phones, tablets, and display screens?",
-        // "Dealer management" is LynxPoker's key differentiator - emphasize this
-        "Dealer Management — Scheduling dealer rotations, tracking breaks, and coordinating assignments. This is the #1 operational pain point for multi-table tournaments.",
-        // "Mystery bounty" is a poker tournament format - use the standard term in target language
-        "Mystery Bounty Support — Mystery bounty tournaments are exploding in popularity. Does the tool handle bounty pools, random prize assignment, and tracking?",
-        "Payout & Prize Calculation — Automatic prize pool calculations, customizable payout structures, and support for guarantees and overlays.",
-        "League & Season Management — Tracking points, rankings, and statistics across multiple tournaments over a season.",
-        "Platform & Accessibility — Web-based vs. desktop? Mobile apps? How many devices can connect? Is there a free tier?",
-        "Multi-Language & RTL Support — Critical for the growing Israeli and Middle Eastern poker markets. Hebrew, Arabic, and right-to-left layouts."
+        "Smart Tournament Clock — More than just a countdown. A beautiful, customizable display that shows blinds, prizes, bounties, player counts, and adapts to your branding. The clock is what your players see all night — it should look stunning.",
+        "Real-Time Multi-Device Sync — Can multiple staff members manage the same tournament simultaneously? Do changes sync instantly across phones, tablets, TVs, and display screens via WebSocket technology?",
+        "Dealer & Floor Management — Scheduling dealer rotations, tracking breaks, coordinating table assignments, and giving floor managers dedicated tools. This is the #1 operational pain point for multi-table tournaments.",
+        "Player Tracking & Analytics — Managing buy-ins, re-buys, add-ons, eliminations, and maintaining a full player database with historical stats across tournaments.",
+        "Mystery Bounty Support — Mystery bounty tournaments are exploding in popularity. Does the tool handle bounty pools, random prize assignment, and live tracking?",
+        "Beautiful UI & User Experience — Software you actually enjoy using. Clean design, intuitive workflows, and a professional look on display screens that impresses your players.",
+        "Easy Setup & Onboarding — How fast can you go from signup to running your first tournament? No training manuals, no IT department required.",
+        "Multi-Language & RTL Support — Critical for the growing Israeli and Middle Eastern poker markets. Native Hebrew, Arabic, and right-to-left layouts — not just machine-translated strings.",
+        "Transparent Pricing — Fixed monthly or yearly pricing with no hidden fees, no per-player charges, and no surprise invoices."
       ]
     },
     {
@@ -53,11 +51,15 @@
     },
     {
       "type": "heading",
-      "text": "1. LynxPoker — Best All-in-One Poker Tournament Management Platform"
+      "text": "1. LynxPoker — Best All-in-One Tournament Management Platform"
     },
     {
       "type": "paragraph",
-      "text": "LynxPoker is the newest entrant in the poker tournament management space, and it's built for the modern era. Unlike legacy desktop software or simple timer apps, LynxPoker is a cloud-first platform designed from scratch with real-time collaboration, dedicated mobile apps for staff, and features that competitors at this price point simply don't offer."
+      "text": "LynxPoker is the most complete poker tournament management platform available in 2026. Built from the ground up with modern WebSocket technology, it delivers blazing-fast real-time sync across every device — from your phone to a 75-inch TV on the wall. But speed is just the beginning."
+    },
+    {
+      "type": "paragraph",
+      "text": "What truly sets LynxPoker apart is the combination of features no other platform at any price point offers together: dedicated Floor and Dealer web apps, comprehensive dealer management, a gorgeous smart tournament clock that displays prizes and bounties beautifully, full player analytics, mystery bounty support, and native RTL/multilingual support. All wrapped in a UI that's genuinely a pleasure to use."
     },
     {
       "type": "heading_h3",
@@ -66,15 +68,15 @@
     {
       "type": "list",
       "items": [
-        "Real-time sync across unlimited devices — floor managers, dealers, and display screens all see the same data instantly",
-        "Dedicated Floor App and Dealer App — purpose-built mobile experiences for staff workflows, not just a responsive website",
-        "Comprehensive dealer management — rotations, break schedules, table assignments, and performance tracking",
-        "Mystery bounty tournament support — built-in bounty pool management, random prize generation, and live tracking",
-        "Full player database — track history, buy-ins, cashes, and statistics across all tournaments",
-        "Blind structure calculator with automated progression and customizable announcements",
-        "Multi-organization support — manage multiple venues or clubs from one account",
-        "Native Hebrew & RTL support — not a translation layer, built from the ground up",
-        "Payout calculator with support for deals, guarantees, and custom structures"
+        "Blazing-fast real-time sync — powered by WebSocket technology, every change appears instantly on all connected devices, TVs, and display screens with zero lag",
+        "Beautiful smart tournament clock — fully customizable display showing blinds, prizes, bounties, player counts, and tournament info. Looks stunning on any screen size.",
+        "Dedicated Floor App & Dealer App — purpose-built web applications for staff workflows. Floor managers and dealers each get tools designed exactly for their role.",
+        "Full dealer management — rotations, break schedules, table assignments, and shift tracking. The only platform at this price point with comprehensive dealer tools.",
+        "Complete player analytics — track history, buy-ins, cashes, P&L, and performance statistics across all tournaments. Give your players insights they'll love.",
+        "Mystery bounty tournament support — built-in bounty pool management, random prize generation, live tracking, and player-visible bounty reveals on the clock display.",
+        "Native RTL & multilingual — Hebrew, English, and more. Not a translation layer — the entire interface is built for right-to-left from the ground up.",
+        "Multi-organization support — manage multiple venues or clubs from one account with separate branding",
+        "Constant updates — new features ship regularly. The platform keeps getting better every month."
       ]
     },
     {
@@ -83,7 +85,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Free tier for small games. Club plans from $29/month. No hidden fees, no contracts, no per-player charges. This positions LynxPoker squarely between free timer apps and enterprise solutions that charge $200-500+/month."
+      "text": "Free tier for small games — no credit card required, sign up and run a tournament in under 5 minutes. Club plans from $29/month with transparent, fixed pricing. No hidden fees, no contracts, no per-player charges, no surprise invoices. You always know exactly what you're paying."
     },
     {
       "type": "heading_h3",
@@ -91,216 +93,37 @@
     },
     {
       "type": "list",
-      // ✅ and ❌ are used as visual markers for pros and cons - keep them
       "items": [
-        "✅ Only platform at this price point with dealer management",
-        "✅ Real-time sync is best-in-class — truly instant across all devices",
-        "✅ Mystery bounty tools built in (most competitors have none)",
-        "✅ Hebrew/RTL native support — uncontested in the Israeli market",
-        "✅ Modern UI that looks professional on display screens",
+        "✅ Fastest real-time sync — WebSocket technology delivers truly instant updates across all devices and TVs",
+        "✅ Best-looking smart tournament clock — customizable, shows prizes and bounties beautifully",
+        "✅ Only platform with dedicated Floor App AND Dealer App for staff",
+        "✅ Comprehensive dealer management at any price point",
+        "✅ Full player analytics and historical stats",
+        "✅ Built-in mystery bounty tools",
+        "✅ Native Hebrew/RTL — uncontested in the Israeli market",
+        "✅ Beautiful UI and exceptional user experience",
+        "✅ Easy signup — run your first tournament in minutes",
+        "✅ Fixed transparent pricing with no hidden fees",
+        "✅ Constant updates and new features",
         "✅ Free tier available",
-        "❌ Newer to market — smaller community than established tools",
-        "❌ No Windows desktop app (web-only, which is also a pro for most users)"
+        "❌ Newer to market — smaller community than some established tools"
       ]
     },
     {
       "type": "callout",
       "emoji": "🎯",
-      "text": "Best for: Poker clubs, home game organizers who want to level up, and anyone who needs dealer management or Hebrew support. The sweet spot between free timers and enterprise platforms."
+      "text": "Best for: Everyone from home game hosts to professional poker club operators. The only platform that combines enterprise-level features with startup-friendly pricing. If you need dealer management, mystery bounty support, or Hebrew — there's literally no alternative."
     },
     {
       "type": "divider"
     },
     {
       "type": "heading",
-      "text": "2. Blind Valet — Best Free Poker Tournament Clock"
+      "text": "2. LetsPoker — Best for Commercial Poker Rooms & Festivals"
     },
     {
       "type": "paragraph",
-      "text": "Blind Valet is a popular cloud-based poker tournament clock used in over 100 countries and translated into 45+ languages. It started as a tournament timer and has grown into a more comprehensive tool with blind structure calculation, payout management, and league tracking."
-    },
-    {
-      "type": "heading_h3",
-      "text": "Key Features"
-    },
-    {
-      "type": "list",
-      "items": [
-        "Blind structure calculator — design the perfect structure in a few clicks",
-        "Cloud-based tournament clock with real-time sync across devices",
-        "Payout calculator for automatic prize distribution",
-        "League management with real-time rankings",
-        "45+ languages supported via AI translation",
-        "Clean, modern interface accessible from any browser"
-      ]
-    },
-    {
-      "type": "heading_h3",
-      "text": "Pricing"
-    },
-    {
-      "type": "paragraph",
-      "text": "Free tier available. Premium plans for advanced features (pricing varies). The free version is surprisingly capable for basic tournaments."
-    },
-    {
-      "type": "heading_h3",
-      "text": "Pros & Cons"
-    },
-    {
-      "type": "list",
-      "items": [
-        "✅ Excellent free tier — great for getting started",
-        "✅ Blind structure calculator is best-in-class",
-        "✅ Cloud-based with multi-device sync",
-        "✅ 45+ languages via AI translation",
-        "✅ Active development (regular updates)",
-        "❌ No dedicated dealer management",
-        "❌ No mystery bounty support",
-        "❌ No dedicated mobile apps for staff",
-        "❌ AI translations may not be as natural as native localization"
-      ]
-    },
-    {
-      "type": "callout",
-      "emoji": "🎯",
-      "text": "Best for: Home game hosts and small clubs looking for a solid free tournament clock with league management. Great starting point before outgrowing to a full platform."
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "heading",
-      // "The Tournament Director" is a product name - keep untranslated
-      "text": "3. The Tournament Director — Best Desktop Poker Tournament Software"
-    },
-    {
-      "type": "paragraph",
-      // "TD" is the abbreviation for The Tournament Director
-      "text": "The Tournament Director (TD) has been the gold standard in desktop poker tournament software for over a decade. It's an incredibly deep, feature-rich Windows application used everywhere from home games to card rooms and casinos. If you want maximum customization and don't mind a steeper learning curve, TD delivers."
-    },
-    {
-      "type": "heading_h3",
-      "text": "Key Features"
-    },
-    {
-      "type": "list",
-      "items": [
-        "Comprehensive tournament management — supports limit, pot-limit, and no-limit games with game changes mid-tournament",
-        "Prize calculation with support for guaranteed pots, house contributions, bounties, multiple rakes, and custom formulas",
-        "Full player and league database with statistics across seasons",
-        "Highly customizable display with multiple screen support and cycling layouts",
-        "Chip calculator and schedule suggestion tools",
-        "Export results to HTML, CSV, and integration with poker community sites",
-        "Customizable hotkeys and extensive keyboard shortcuts",
-        "30-day free trial"
-      ]
-    },
-    {
-      "type": "heading_h3",
-      "text": "Pricing"
-    },
-    {
-      "type": "paragraph",
-      "text": "One-time purchase (approximately $40). This is great value if you prefer desktop software. The 30-day free trial lets you test everything before buying."
-    },
-    {
-      "type": "heading_h3",
-      "text": "Pros & Cons"
-    },
-    {
-      "type": "list",
-      "items": [
-        "✅ Most feature-rich desktop tournament software available",
-        "✅ One-time purchase — no subscription fees",
-        "✅ Deep customization — layouts, hotkeys, export formats",
-        "✅ Excellent league and season management",
-        "✅ Proven track record (10+ years in market)",
-        "❌ Windows-only — no Mac, no mobile, no web access",
-        "❌ No real-time sync between devices",
-        "❌ No cloud backup — data lives on one machine",
-        "❌ Steep learning curve for first-time users",
-        "❌ No dealer management tools",
-        "❌ UI feels dated compared to modern web tools"
-      ]
-    },
-    {
-      "type": "callout",
-      "emoji": "🎯",
-      // "Windows PC" - keep "Windows" untranslated
-      "text": "Best for: Power users who run tournaments from a dedicated Windows PC and want maximum control over every setting. Great for home games with a fixed setup."
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "heading",
-      "text": "4. The Poker Timer — Best Simple Poker Clock App"
-    },
-    {
-      "type": "paragraph",
-      "text": "The Poker Timer has been trusted by nearly 56,000 tournament hosts globally over more than a decade. Now in its third generation, it focuses on being a beautiful, easy-to-use poker clock designed for big screens. If all you need is a clean tournament timer with basic player management, this is a strong choice."
-    },
-    {
-      "type": "heading_h3",
-      "text": "Key Features"
-    },
-    {
-      "type": "list",
-      "items": [
-        "Beautiful big-screen display designed for tournament rooms",
-        "Guided tournament creator — set up a tournament in minutes without reading a manual",
-        "Player management with re-buy, add-on, and knockout tracking",
-        "Cloud-based structure saving — access your tournament templates from any computer",
-        "Customizable colors and sounds with a \"talking host\" for real-time announcements",
-        "Intuitive level controls — manage the tournament like a video player",
-        // "FreePokClock.com" is a URL - keep untranslated
-        "Free mobile poker clock available (FreePokClock.com) for basic needs"
-      ]
-    },
-    {
-      "type": "heading_h3",
-      "text": "Pricing"
-    },
-    {
-      "type": "paragraph",
-      // "Windows" and "Mac" are platform names - keep untranslated
-      "text": "Available for Windows and Mac. Paid software with a free basic mobile version. The full desktop app is premium-priced."
-    },
-    {
-      "type": "heading_h3",
-      "text": "Pros & Cons"
-    },
-    {
-      "type": "list",
-      "items": [
-        "✅ Best-looking tournament clock display — designed for big screens",
-        "✅ Incredibly easy setup — guided creator means no learning curve",
-        "✅ Cross-platform (Windows + Mac)",
-        "✅ Talking host announcements add a professional touch",
-        "✅ Large established user base (56,000+ hosts)",
-        "❌ Primarily a clock/timer — limited tournament management beyond that",
-        "❌ No real-time multi-device sync for staff",
-        "❌ No dealer management",
-        "❌ No mystery bounty support",
-        "❌ No Hebrew/RTL support",
-        "❌ Desktop-first — limited mobile functionality"
-      ]
-    },
-    {
-      "type": "callout",
-      "emoji": "🎯",
-      "text": "Best for: Home game hosts and small clubs who want a beautiful, no-fuss poker clock on a big screen. Great if you just need a timer and basic player tracking."
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "heading",
-      "text": "5. LetsPoker — Best for Commercial Poker Rooms & Festivals"
-    },
-    {
-      "type": "paragraph",
-      "text": "LetsPoker is a comprehensive platform that combines a player-facing mobile app with full poker room management software. Established in 2016, it's used by commercial card rooms, poker festivals, and professional tournament series. It's the most enterprise-oriented tool on this list."
+      "text": "LetsPoker is a comprehensive platform that combines a player-facing mobile app with full poker room management software. Established in 2016, it's used by commercial card rooms, poker festivals, and professional tournament series. It's the most enterprise-oriented tool on this list — and priced accordingly."
     },
     {
       "type": "heading_h3",
@@ -311,10 +134,10 @@
       "items": [
         "Player discovery app — players can find tournaments, check structures, and get push notifications",
         "Full room management platform — tournaments, cash games, waiting lists, and business intelligence",
-        "Tablet-on-table support — dealers manage eliminations and rebuys from a tablet at the table",
+        "Real-time sync across devices with floor management tools",
         "Player check-in with photo database and compliance tracking",
+        "Mystery bounty tournament support",
         "In-app messaging between players and room staff",
-        "Cash game management with waitlist handling",
         "Professional tournament clock display"
       ]
     },
@@ -324,7 +147,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Enterprise/custom pricing — contact for a quote. The player-facing app is free. Based on industry positioning, expect premium pricing ($200+/month or more) suitable for commercial operations."
+      "text": "Enterprise/custom pricing — contact for a quote. No free tier, no self-service signup. The player-facing app is free to download. Based on industry positioning, expect premium pricing ($200+/month or more) suitable for commercial operations."
     },
     {
       "type": "heading_h3",
@@ -335,20 +158,205 @@
       "items": [
         "✅ Most complete platform for commercial poker rooms",
         "✅ Player-facing app creates a community/discovery ecosystem",
-        "✅ Push notifications and in-app messaging",
+        "✅ Real-time sync with floor management tools",
+        "✅ Mystery bounty support",
         "✅ Cash game management (unique among competitors)",
         "✅ Established since 2016 with a strong track record",
-        "❌ Enterprise pricing makes it inaccessible for clubs and home games",
-        "❌ Overkill for most independent organizers",
+        "❌ No free tier — enterprise pricing makes it inaccessible for clubs and home games",
         "❌ No self-service signup — requires contacting sales",
+        "❌ No transparent fixed pricing — custom quotes only",
         "❌ No Hebrew/RTL support",
-        "❌ No mystery bounty-specific tools"
+        "❌ Overkill for most independent organizers"
       ]
     },
     {
       "type": "callout",
       "emoji": "🎯",
-      "text": "Best for: Commercial poker rooms and large festival operators who need a full ecosystem including a player-facing app. Budget needs to match enterprise pricing."
+      "text": "Best for: Commercial poker rooms and large festival operators who need a full ecosystem including a player-facing app, and have the budget to match enterprise pricing."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "3. Blind Valet — Solid Cloud-Based Tournament Clock"
+    },
+    {
+      "type": "paragraph",
+      "text": "Blind Valet is a cloud-based poker tournament clock used in over 100 countries and translated into 45+ languages. It's been around for years and offers a straightforward tournament timing experience with some additional tools like blind structure calculation and league tracking."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Key Features"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Blind structure calculator — design tournament structures in a few clicks",
+        "Cloud-based tournament clock accessible from any browser",
+        "Payout calculator for automatic prize distribution",
+        "League management with rankings",
+        "45+ languages supported via AI translation",
+        "Clean interface with basic customization"
+      ]
+    },
+    {
+      "type": "heading_h3",
+      "text": "Pricing"
+    },
+    {
+      "type": "paragraph",
+      "text": "Paid subscription with some free features. Premium plans for advanced functionality."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Pros & Cons"
+    },
+    {
+      "type": "list",
+      "items": [
+        "✅ Solid blind structure calculator",
+        "✅ Cloud-based — works from any browser",
+        "✅ 45+ languages via AI translation",
+        "✅ Active development",
+        "❌ No real-time multi-device sync",
+        "❌ No dealer management",
+        "❌ No floor management tools",
+        "❌ No mystery bounty support",
+        "❌ No dedicated mobile apps for staff",
+        "❌ AI translations lack natural quality",
+        "❌ Clock display is basic compared to modern alternatives",
+        "❌ No free tier"
+      ]
+    },
+    {
+      "type": "callout",
+      "emoji": "🎯",
+      "text": "Best for: Organizers who primarily need a blind structure calculator and basic tournament clock. Good for simple setups where advanced features aren't needed."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "4. The Tournament Director — Legacy Desktop Software"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Tournament Director (TD) has been a staple in the poker world for over a decade. It's a Windows-only desktop application with deep customization options and a loyal user base. If you run tournaments from a dedicated PC and want granular control over every setting, TD delivers — but at the cost of modern conveniences."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Key Features"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Comprehensive tournament management — supports limit, pot-limit, and no-limit games with mid-tournament game changes",
+        "Prize calculation with support for guaranteed pots, bounties, multiple rakes, and custom formulas",
+        "Player and league database with statistics across seasons",
+        "Highly customizable display with multiple screen support",
+        "Export results to HTML, CSV, and poker community sites",
+        "Customizable hotkeys and keyboard shortcuts",
+        "30-day free trial"
+      ]
+    },
+    {
+      "type": "heading_h3",
+      "text": "Pricing"
+    },
+    {
+      "type": "paragraph",
+      "text": "One-time purchase (approximately $40). No ongoing fees after purchase. The 30-day free trial lets you test everything before buying."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Pros & Cons"
+    },
+    {
+      "type": "list",
+      "items": [
+        "✅ Deep customization — layouts, hotkeys, export formats",
+        "✅ One-time purchase — no subscription fees",
+        "✅ Proven track record (10+ years)",
+        "✅ League and season management",
+        "❌ Windows-only — no Mac, no mobile, no web access",
+        "❌ No real-time sync between devices",
+        "❌ No cloud backup — data lives on one machine",
+        "❌ Steep learning curve — requires significant setup time",
+        "❌ No dealer or floor management tools",
+        "❌ No mystery bounty support",
+        "❌ UI feels dated compared to modern web tools",
+        "❌ No Hebrew/RTL support",
+        "❌ No free tier (only 30-day trial)"
+      ]
+    },
+    {
+      "type": "callout",
+      "emoji": "🎯",
+      "text": "Best for: Power users who run tournaments from a dedicated Windows PC and want maximum control over every detail. Not suitable for anyone who needs mobile access or multi-device workflows."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "5. Ultimate Holdem Timer — Clean Free Poker Clock"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ultimate Holdem Timer (UHT) is a free, no-account-required poker tournament timer that runs in your browser. It positions itself as \"the most advanced poker tournament timer available\" and offers a clean, modern interface with dark mode support, multiple display themes, and basic bounty tracking. It's a solid choice if you want a straightforward clock without creating an account."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Key Features"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Free poker clock — no ads, no trackers, no account required",
+        "Multiple display themes with customization options",
+        "Dark mode support",
+        "Basic bounty tournament tracking",
+        "Connect multiple displays with remote control",
+        "Custom chip graphics on display",
+        "Works on any device with a browser"
+      ]
+    },
+    {
+      "type": "heading_h3",
+      "text": "Pricing"
+    },
+    {
+      "type": "paragraph",
+      "text": "Completely free. No premium tiers, no ads, no account creation needed. Open the website and start a tournament immediately."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Pros & Cons"
+    },
+    {
+      "type": "list",
+      "items": [
+        "✅ 100% free with no strings attached",
+        "✅ No account required — instant access",
+        "✅ Clean, modern interface with dark mode",
+        "✅ Multiple display themes",
+        "✅ Basic bounty tracking included",
+        "✅ Active community on Reddit",
+        "❌ Primarily a timer — very limited tournament management beyond the clock",
+        "❌ No player database or historical stats",
+        "❌ No dealer or floor management",
+        "❌ No real-time staff sync",
+        "❌ No Hebrew/RTL support",
+        "❌ No league or season management",
+        "❌ Limited customization compared to full platforms"
+      ]
+    },
+    {
+      "type": "callout",
+      "emoji": "🎯",
+      "text": "Best for: Casual home game hosts who want a clean, free poker clock without the hassle of creating an account. Great for simple needs, but you'll outgrow it quickly if you need actual tournament management."
     },
     {
       "type": "divider"
@@ -363,22 +371,42 @@
     },
     {
       "type": "comparison_table",
-      // Table headers and row labels need translation; cell values (✅, ❌, product names, prices) should stay as-is
-      "headers": ["Feature", "LynxPoker", "Blind Valet", "Tournament Director", "Poker Timer", "LetsPoker"],
+      "headers": ["Feature", "LynxPoker", "LetsPoker", "Blind Valet", "Tournament Director", "UHT"],
       "rows": [
-        ["Tournament Clock", "✅", "✅", "✅", "✅", "✅"],
-        ["Blind Calculator", "✅", "✅", "✅", "✅", "✅"],
-        ["Player Tracking", "✅", "✅", "✅", "Basic", "✅"],
-        ["Real-Time Sync", "✅", "✅", "❌", "❌", "✅"],
-        ["Dealer Management", "✅", "❌", "❌", "❌", "Partial"],
-        ["Mystery Bounty", "✅", "❌", "❌", "❌", "❌"],
-        ["Mobile Apps", "✅", "Web", "❌", "Basic", "✅"],
-        ["Hebrew/RTL", "✅", "AI Translation", "❌", "❌", "❌"],
-        ["League Management", "✅", "✅", "✅", "❌", "❌"],
-        ["Multi-Organization", "✅", "❌", "❌", "❌", "✅"],
-        ["Payout Calculator", "✅", "✅", "✅", "✅", "✅"],
-        ["Free Tier", "✅", "✅", "30-day trial", "Free mobile", "Player app only"],
-        ["Starting Price", "Free/$29/mo", "Free", "~$40 once", "Paid", "Enterprise"]
+        ["Real-Time Sync", "✅", "✅", "❌", "❌", "❌"],
+        ["Smart Tournament Clock", "✅", "✅", "Basic", "Basic", "✅"],
+        ["Dealer Management", "✅", "Partial", "❌", "❌", "❌"],
+        ["Floor Management", "✅", "✅", "❌", "❌", "❌"],
+        ["Player Analytics", "✅", "✅", "Basic", "✅", "❌"],
+        ["Mystery Bounty", "✅", "✅", "❌", "❌", "Basic"],
+        ["RTL & Multilingual", "✅", "❌", "AI Only", "❌", "❌"],
+        ["Dedicated Staff Apps", "✅", "✅", "❌", "❌", "❌"],
+        ["Instant Setup", "✅", "❌", "✅", "❌", "✅"],
+        ["Transparent Pricing", "✅", "❌", "✅", "✅", "✅ (Free)"],
+        ["Free Tier", "✅", "❌", "❌", "Trial Only", "✅"],
+        ["Starting Price", "Free", "Enterprise", "Paid", "~$40 once", "Free"]
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "text": "Why LynxPoker Leads the Pack"
+    },
+    {
+      "type": "paragraph",
+      "text": "Looking at the comparison table, one thing becomes immediately clear: LynxPoker is the only platform that checks every box. Here's why each advantage matters in practice:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "WebSocket-powered sync means when a floor manager updates a table assignment on their phone, the dealer sees it on their tablet and the TV on the wall updates — all within milliseconds. No refreshing, no waiting, no \"did you get that?\" on the radio.",
+        "The smart tournament clock isn't just a timer with big numbers. It's a fully customizable display that shows blinds, prizes, bounties, player counts, and tournament branding. It looks professional enough for a festival and beautiful enough to impress your home game players.",
+        "Dedicated Floor and Dealer web apps give your staff purpose-built tools instead of making everyone use the same generic interface. Dealers see what dealers need. Floor managers see what floor managers need.",
+        "Full dealer management — rotations, breaks, table assignments, shift scheduling — eliminates the spreadsheets and WhatsApp groups that most clubs still rely on.",
+        "Player analytics across all tournaments means your regulars can track their own performance, and you can make data-driven decisions about your tournament structures and scheduling.",
+        "Fixed, transparent pricing means no surprises. You know exactly what you're paying — every month, every year. No per-player charges, no hidden fees, no \"contact sales for a quote.\""
       ]
     },
     {
@@ -390,31 +418,15 @@
     },
     {
       "type": "paragraph",
-      // "PokerStars" is a brand name - keep untranslated
-      "text": "Mystery bounty tournaments have exploded in popularity since PokerStars popularized the format in 2022. The format — where eliminated players reveal a random bounty prize that could range from a small amount to a life-changing jackpot — creates incredible excitement and drives higher registration numbers."
+      "text": "Mystery bounty tournaments have exploded in popularity since PokerStars popularized the format in 2022. The format — where eliminating a player reveals a random bounty prize that could range from a small amount to a life-changing jackpot — creates incredible excitement and drives higher registration numbers."
     },
     {
       "type": "paragraph",
-      "text": "Yet most poker tournament management software hasn't caught up. Running a mystery bounty tournament with traditional tools means manually managing bounty pools, randomly assigning prizes with physical envelopes or separate randomizer apps, and tracking everything on paper or spreadsheets. It's a logistical nightmare, especially with 100+ players."
-    },
-    {
-      "type": "heading_h3",
-      "text": "What a Good Mystery Bounty Manager Needs"
-    },
-    {
-      "type": "list",
-      "items": [
-        "Bounty pool configuration — define prize tiers, quantities, and distribution percentages",
-        "Random prize generation — cryptographically fair random assignment when a player is eliminated",
-        "Live tracking dashboard — real-time view of remaining bounties, claimed prizes, and pool status",
-        "Player-visible display — show bounty reveals on the tournament screen for maximum excitement",
-        "Integration with player tracking — automatically link bounty claims to eliminations",
-        "History and reporting — complete audit trail of all bounty assignments"
-      ]
+      "text": "Yet most poker tournament management software hasn't caught up. Running a mystery bounty tournament with traditional tools means manually managing bounty pools, randomly assigning prizes with physical envelopes, and tracking everything on paper. It's a logistical nightmare with 100+ players."
     },
     {
       "type": "paragraph",
-      "text": "As of early 2026, LynxPoker is the only mid-range platform offering built-in mystery bounty tournament tools. If you're running mystery bounty events regularly, this alone could be the deciding factor in choosing your poker tournament management software."
+      "text": "LynxPoker and LetsPoker both offer mystery bounty support, but LynxPoker makes it accessible at a fraction of the cost. UHT offers basic bounty tracking but lacks the full management workflow. Blind Valet and Tournament Director have no bounty support at all."
     },
     {
       "type": "divider"
@@ -425,7 +437,7 @@
     },
     {
       "type": "paragraph",
-      "text": "The best tool depends entirely on your specific needs. Here's a quick decision framework:"
+      "text": "The best tool depends on your specific needs and budget. Here's a quick decision framework:"
     },
     {
       "type": "heading_h3",
@@ -434,50 +446,15 @@
     {
       "type": "list",
       "items": [
-        "You need dealer management (rotations, schedules, dedicated app)",
+        "You want the most complete feature set at a fair price",
+        "You need real-time sync across phones, tablets, and TVs",
+        "You run multi-table tournaments and need dealer/floor management",
+        "You want a beautiful smart clock that shows prizes and bounties",
+        "You need player analytics and historical stats",
         "You run mystery bounty tournaments",
-        "You need Hebrew/RTL support",
-        "You want real-time sync AND dedicated mobile apps for staff",
-        "You manage multiple clubs or venues",
-        "You want modern features at a reasonable price ($29/mo vs $200+/mo)"
-      ]
-    },
-    {
-      "type": "heading_h3",
-      "text": "Choose Blind Valet if..."
-    },
-    {
-      "type": "list",
-      "items": [
-        "You need a solid free tournament clock",
-        "Blind structure calculation is your primary need",
-        "You run a poker league and need simple ranking management",
-        "Budget is the #1 constraint"
-      ]
-    },
-    {
-      "type": "heading_h3",
-      "text": "Choose The Tournament Director if..."
-    },
-    {
-      "type": "list",
-      "items": [
-        "You run tournaments from a dedicated Windows PC",
-        "You want maximum customization and don't mind a learning curve",
-        "You prefer a one-time purchase over subscription",
-        "You don't need mobile or multi-device access"
-      ]
-    },
-    {
-      "type": "heading_h3",
-      "text": "Choose The Poker Timer if..."
-    },
-    {
-      "type": "list",
-      "items": [
-        "You just need a beautiful clock on a big screen",
-        "Simplicity is more important than features",
-        "You run small home games with basic needs"
+        "You need Hebrew/RTL or multilingual support",
+        "You want to sign up and start running tournaments in minutes",
+        "You want fixed pricing with no surprises"
       ]
     },
     {
@@ -494,11 +471,47 @@
       ]
     },
     {
+      "type": "heading_h3",
+      "text": "Choose Blind Valet if..."
+    },
+    {
+      "type": "list",
+      "items": [
+        "You primarily need a blind structure calculator",
+        "You run a small poker league and need basic ranking management",
+        "You want a simple cloud-based clock without advanced features"
+      ]
+    },
+    {
+      "type": "heading_h3",
+      "text": "Choose Tournament Director if..."
+    },
+    {
+      "type": "list",
+      "items": [
+        "You run tournaments from a dedicated Windows PC that never moves",
+        "You want maximum customization and don't mind a steep learning curve",
+        "You prefer a one-time purchase over subscription",
+        "You don't need mobile, cloud, or multi-device access"
+      ]
+    },
+    {
+      "type": "heading_h3",
+      "text": "Choose Ultimate Holdem Timer if..."
+    },
+    {
+      "type": "list",
+      "items": [
+        "You just need a free, clean poker clock — nothing more",
+        "You don't want to create an account",
+        "You run casual home games with basic needs"
+      ]
+    },
+    {
       "type": "divider"
     },
     {
       "type": "heading",
-      // FAQ section - these are common search queries people type, translate naturally
       "text": "Frequently Asked Questions"
     },
     {
@@ -507,7 +520,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Blind Valet offers the best free poker tournament clock with cloud sync and blind structure calculation. LynxPoker also offers a free tier that includes more features like player tracking. For a basic mobile clock, The Poker Timer's free version (FreePokClock.com) works for simple needs."
+      "text": "Ultimate Holdem Timer is the best completely free poker clock — no account needed, no ads. LynxPoker also offers a free tier with significantly more features including player tracking and a smart customizable clock. For basic mobile needs, both work well in a browser."
     },
     {
       "type": "heading_h3",
@@ -515,7 +528,7 @@
     },
     {
       "type": "paragraph",
-      "text": "As of 2026, LynxPoker is the only mid-range poker tournament management software with built-in mystery bounty tools. Most other platforms require manual management with spreadsheets or external tools for mystery bounty tournaments."
+      "text": "LynxPoker and LetsPoker both offer built-in mystery bounty tournament tools. LynxPoker makes it accessible starting from the free tier, while LetsPoker requires enterprise pricing. Ultimate Holdem Timer has basic bounty tracking. Blind Valet and Tournament Director have no bounty support."
     },
     {
       "type": "heading_h3",
@@ -523,7 +536,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Dealer management is surprisingly rare in poker tournament software. LynxPoker is the only platform at the $29/month price point offering comprehensive dealer management with rotations, schedules, and a dedicated dealer app. LetsPoker offers partial dealer support at enterprise pricing. Most other tools have no dealer management at all."
+      "text": "Dealer management is surprisingly rare in poker tournament software. LynxPoker is the only platform offering comprehensive dealer management with rotations, schedules, break tracking, and a dedicated Dealer App — all at a transparent fixed price. LetsPoker offers partial dealer support at enterprise pricing. All other tools have zero dealer management."
     },
     {
       "type": "heading_h3",
@@ -531,7 +544,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Yes — both LynxPoker and Blind Valet are cloud-based and work fully from a phone browser. LynxPoker additionally offers dedicated mobile apps (Floor App and Dealer App) designed specifically for staff managing tournaments on their feet."
+      "text": "Yes — LynxPoker, LetsPoker, Blind Valet, and Ultimate Holdem Timer all work from a phone browser. LynxPoker additionally offers dedicated Floor and Dealer web apps designed specifically for staff managing tournaments on their feet. Tournament Director is Windows-only and cannot be used from a phone."
     },
     {
       "type": "heading_h3",
@@ -539,7 +552,15 @@
     },
     {
       "type": "paragraph",
-      "text": "LynxPoker is the only poker tournament management platform with native Hebrew and RTL (right-to-left) support built from the ground up. Blind Valet offers AI-translated Hebrew among its 45+ languages, but the translation quality may vary. Other tools on this list don't support Hebrew at all."
+      "text": "LynxPoker is the only poker tournament management platform with native Hebrew and RTL (right-to-left) support built from the ground up. Blind Valet offers AI-translated Hebrew among 45+ languages, but translation quality varies. LetsPoker, Tournament Director, and Ultimate Holdem Timer don't support Hebrew at all."
+    },
+    {
+      "type": "heading_h3",
+      "text": "Which poker tournament software has the best tournament clock?"
+    },
+    {
+      "type": "paragraph",
+      "text": "LynxPoker's smart tournament clock is the most feature-rich and visually impressive — fully customizable with live display of blinds, prizes, bounties, player counts, and tournament branding. Ultimate Holdem Timer offers a clean free clock with multiple themes. LetsPoker has a professional clock display. Blind Valet and Tournament Director offer basic clock functionality."
     },
     {
       "type": "divider"
@@ -550,16 +571,16 @@
     },
     {
       "type": "paragraph",
-      "text": "The poker tournament management software market in 2026 offers more options than ever, but the right choice depends on where you sit. Home game hosts can start with Blind Valet's free tier or The Poker Timer's simplicity. Power users who live on Windows might love The Tournament Director's depth. Commercial rooms should look at LetsPoker's ecosystem."
+      "text": "The poker tournament management software landscape in 2026 ranges from free timer apps to enterprise platforms costing hundreds per month. Each tool has its niche: Ultimate Holdem Timer for a quick free clock, Blind Valet for blind structure calculation, Tournament Director for Windows power users, and LetsPoker for commercial poker rooms."
     },
     {
       "type": "paragraph",
-      "text": "But for the growing majority of organizers — poker clubs, serious home game hosts, festival directors, and anyone in the Hebrew-speaking market — LynxPoker hits the sweet spot. It's the only platform that combines real-time sync, dealer management, mystery bounty tools, and native Hebrew support at a price that doesn't require an enterprise budget."
+      "text": "But for the vast majority of organizers — poker clubs, serious home game hosts, festival directors, and the entire Hebrew-speaking market — LynxPoker is the clear winner. No other platform combines blazing-fast WebSocket sync, a beautiful smart clock, dedicated staff apps, full dealer management, player analytics, mystery bounty tools, and native RTL support at a transparent, fixed price. And with a free tier to get started, there's nothing to lose."
     },
     {
       "type": "callout",
       "emoji": "🚀",
-      "text": "Ready to try LynxPoker? Start free at lynx.poker — no credit card required. Set up your first tournament in under 5 minutes and see the difference a modern poker tournament management platform makes."
+      "text": "Ready to upgrade your tournaments? Start free at lynx.poker — no credit card required. Sign up, create your first tournament in minutes, and see why organizers are switching to LynxPoker."
     }
   ]
 }

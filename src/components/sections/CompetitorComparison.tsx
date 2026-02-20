@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, X, Minus } from "lucide-react";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 
 type Status = "yes" | "no" | "partial";
 
@@ -10,9 +10,10 @@ type Feature = {
   nameEn: string;
   nameHe: string;
   lynx: Status;
+  letsPoker: Status;
   blindValet: Status;
   tournamentDirector: Status;
-  letsPoker: Status;
+  uht: Status;
 };
 
 const features: Feature[] = [
@@ -20,81 +21,91 @@ const features: Feature[] = [
     nameEn: "Real-Time Multi-Device Sync",
     nameHe: "סנכרון בזמן אמת בין מכשירים",
     lynx: "yes",
+    letsPoker: "yes",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "yes",
+    uht: "no",
   },
   {
     nameEn: "Dealer Management",
     nameHe: "ניהול דילרים",
     lynx: "yes",
+    letsPoker: "no",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "no",
+    uht: "no",
   },
   {
     nameEn: "Floor Management",
     nameHe: "ניהול פלור",
     lynx: "yes",
+    letsPoker: "yes",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "yes",
+    uht: "no",
   },
   {
     nameEn: "RTL & Multilingual Support",
     nameHe: "תמיכה ב-RTL ורב-שפתיות",
     lynx: "yes",
+    letsPoker: "no",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "no",
+    uht: "no",
   },
   {
     nameEn: "Player History & Analytics",
     nameHe: "היסטוריית שחקנים ואנליטיקס",
     lynx: "yes",
+    letsPoker: "yes",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "yes",
+    uht: "no",
   },
   {
     nameEn: "Smart Tournament Clock",
     nameHe: "שעון טורניר חכם",
     lynx: "yes",
+    letsPoker: "yes",
     blindValet: "no",
     tournamentDirector: "partial",
-    letsPoker: "yes",
+    uht: "yes",
   },
   {
     nameEn: "Free Tier Available",
     nameHe: "תוכנית חינמית",
     lynx: "yes",
+    letsPoker: "no",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "no",
+    uht: "yes",
   },
   {
     nameEn: "Instant Setup — No Training Needed",
     nameHe: "הקמה מיידית — ללא הדרכה",
     lynx: "yes",
+    letsPoker: "no",
     blindValet: "yes",
     tournamentDirector: "no",
-    letsPoker: "no",
+    uht: "yes",
   },
   {
     nameEn: "Transparent Fixed Pricing",
     nameHe: "מחירון שקוף וקבוע",
     lynx: "yes",
-    blindValet: "yes",
-    tournamentDirector: "partial",
     letsPoker: "no",
+    blindValet: "yes",
+    tournamentDirector: "yes",
+    uht: "yes",
   },
   {
     nameEn: "Mystery Bounty Management",
     nameHe: "ניהול מיסטרי באונטי",
     lynx: "yes",
+    letsPoker: "yes",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "yes",
+    uht: "partial",
   },
 ];
 
@@ -137,23 +148,30 @@ export function CompetitorComparison() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <table className="w-full min-w-[700px]">
+      <table className="w-full min-w-[800px]">
         <thead>
           <tr className="border-b border-amber-500/10">
-            <th className="text-start text-sm font-semibold text-text-secondary py-4 px-4 w-[28%]">
+            <th className="text-start text-sm font-semibold text-text-secondary py-4 px-3 w-[24%]">
               {isHe ? "תכונה" : "Feature"}
             </th>
-            <th className="text-center py-4 px-4">
+            <th className="text-center py-4 px-3">
               <div className="inline-flex flex-col items-center gap-1.5">
                 <span className="text-base font-extrabold text-gold-gradient tracking-wide">LynxPoker</span>
                 <span className="text-[10px] uppercase tracking-widest text-amber-500/60 font-bold">♠ ♥ ♦ ♣</span>
               </div>
             </th>
-            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">LetsPoker</th>
-            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">Blind Valet</th>
-            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">
+            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-3">LetsPoker</th>
+            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-3">
+              <span className="hidden sm:inline">Blind Valet</span>
+              <span className="sm:hidden">BV</span>
+            </th>
+            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-3">
               <span className="hidden sm:inline">Tournament Director</span>
               <span className="sm:hidden">TD</span>
+            </th>
+            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-3">
+              <span className="hidden sm:inline">UH Timer</span>
+              <span className="sm:hidden">UHT</span>
             </th>
           </tr>
         </thead>
@@ -167,27 +185,32 @@ export function CompetitorComparison() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
             >
-              <td className="text-sm text-text-primary py-3.5 px-4 font-medium">
+              <td className="text-sm text-text-primary py-3.5 px-3 font-medium">
                 {isHe ? feature.nameHe : feature.nameEn}
               </td>
-              <td className="text-center py-3.5 px-4 bg-amber-500/[0.03] border-x border-amber-500/[0.06]">
+              <td className="text-center py-3.5 px-3 bg-amber-500/[0.03] border-x border-amber-500/[0.06]">
                 <div className="flex justify-center">
                   <StatusIcon status={feature.lynx} />
                 </div>
               </td>
-              <td className="text-center py-3.5 px-4">
+              <td className="text-center py-3.5 px-3">
                 <div className="flex justify-center">
                   <StatusIcon status={feature.letsPoker} />
                 </div>
               </td>
-              <td className="text-center py-3.5 px-4">
+              <td className="text-center py-3.5 px-3">
                 <div className="flex justify-center">
                   <StatusIcon status={feature.blindValet} />
                 </div>
               </td>
-              <td className="text-center py-3.5 px-4">
+              <td className="text-center py-3.5 px-3">
                 <div className="flex justify-center">
                   <StatusIcon status={feature.tournamentDirector} />
+                </div>
+              </td>
+              <td className="text-center py-3.5 px-3">
+                <div className="flex justify-center">
+                  <StatusIcon status={feature.uht} />
                 </div>
               </td>
             </motion.tr>
