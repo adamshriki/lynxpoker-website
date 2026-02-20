@@ -60,9 +60,9 @@ const features: Feature[] = [
     nameEn: "Smart Tournament Clock",
     nameHe: "שעון טורניר חכם",
     lynx: "yes",
-    blindValet: "yes",
-    tournamentDirector: "yes",
-    letsPoker: "partial",
+    blindValet: "no",
+    tournamentDirector: "no",
+    letsPoker: "yes",
   },
   {
     nameEn: "Free Tier Available",
