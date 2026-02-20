@@ -50,11 +50,11 @@ function FeaturedPost({ post, translation }: { post: BlogPostMeta; translation: 
         className="group block relative overflow-hidden rounded-2xl border border-border-primary bg-gradient-to-br from-surface-primary to-surface-secondary hover:border-primary/50 transition-all duration-300"
       >
         <div className="grid md:grid-cols-2 gap-0">
-          <div className="relative aspect-[16/10] md:aspect-auto overflow-hidden bg-surface-secondary">
+          <div className="relative overflow-hidden bg-surface-secondary">
             <img
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${post.thumbnail}`}
               alt={translation.title}
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
             />
           </div>
           <div className="p-8 md:p-10 flex flex-col justify-center">
