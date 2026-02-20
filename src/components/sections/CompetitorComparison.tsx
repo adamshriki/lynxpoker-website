@@ -61,7 +61,7 @@ const features: Feature[] = [
     nameHe: "שעון טורניר חכם",
     lynx: "yes",
     blindValet: "no",
-    tournamentDirector: "no",
+    tournamentDirector: "partial",
     letsPoker: "yes",
   },
   {
