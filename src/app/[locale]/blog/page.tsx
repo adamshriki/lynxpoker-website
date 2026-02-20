@@ -51,11 +51,11 @@ function FeaturedPost({ post, translation }: { post: BlogPostMeta; translation: 
       >
         <div className="grid md:grid-cols-2 gap-0">
           <div className="relative aspect-[16/10] md:aspect-auto overflow-hidden bg-surface-secondary">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/5 flex items-center justify-center">
-              <div className="text-6xl opacity-40 group-hover:scale-110 transition-transform duration-500">
-                {post.emoji}
-              </div>
-            </div>
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${post.thumbnail}`}
+              alt={translation.title}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
           </div>
           <div className="p-8 md:p-10 flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-4">
@@ -95,11 +95,11 @@ function PostCard({ post, translation }: { post: BlogPostMeta; translation: Post
         className="group flex flex-col h-full rounded-xl border border-border-primary bg-surface-primary hover:border-primary/40 hover:bg-surface-secondary transition-all duration-300 overflow-hidden"
       >
         <div className="relative aspect-[16/9] overflow-hidden bg-surface-secondary">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 flex items-center justify-center">
-            <div className="text-5xl opacity-30 group-hover:scale-110 transition-transform duration-500">
-              {post.emoji}
-            </div>
-          </div>
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${post.thumbnail}`}
+            alt={translation.title}
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
         </div>
         <div className="p-6 flex flex-col flex-1">
           <div className="flex items-center gap-3 mb-3">

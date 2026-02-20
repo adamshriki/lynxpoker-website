@@ -171,6 +171,20 @@ export default function BlogPostPage({
       </nav>
 
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-20">
+        {/* Hero thumbnail */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 border border-border-primary shadow-elevation-3"
+        >
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${post.thumbnail}`}
+            alt={meta.title}
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
         <motion.header initial="hidden" animate="visible" variants={stagger} className="mb-12">
           <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-3 mb-6">
             <CategoryBadge category={post.category} />
