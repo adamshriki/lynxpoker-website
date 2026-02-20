@@ -52,9 +52,9 @@ const features: Feature[] = [
     nameEn: "Player History & Analytics",
     nameHe: "היסטוריית שחקנים ואנליטיקס",
     lynx: "yes",
-    blindValet: "yes",
-    tournamentDirector: "yes",
-    letsPoker: "no",
+    blindValet: "no",
+    tournamentDirector: "no",
+    letsPoker: "yes",
   },
   {
     nameEn: "Smart Tournament Clock",
