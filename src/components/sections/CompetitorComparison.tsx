@@ -36,9 +36,9 @@ const features: Feature[] = [
     nameEn: "Floor Management",
     nameHe: "ניהול פלור",
     lynx: "yes",
-    blindValet: "partial",
+    blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "no",
+    letsPoker: "yes",
   },
   {
     nameEn: "RTL & Multilingual Support",
