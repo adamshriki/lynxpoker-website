@@ -68,7 +68,7 @@ const features: Feature[] = [
     nameEn: "Free Tier Available",
     nameHe: "תוכנית חינמית",
     lynx: "yes",
-    blindValet: "yes",
+    blindValet: "no",
     tournamentDirector: "no",
     letsPoker: "no",
   },
