@@ -149,12 +149,12 @@ export function CompetitorComparison() {
                 <span className="text-[10px] uppercase tracking-widest text-amber-500/60 font-bold">♠ ♥ ♦ ♣</span>
               </div>
             </th>
+            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">LetsPoker</th>
             <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">Blind Valet</th>
             <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">
               <span className="hidden sm:inline">Tournament Director</span>
               <span className="sm:hidden">TD</span>
             </th>
-            <th className="text-center text-sm font-semibold text-text-minus-2 py-4 px-4">LetsPoker</th>
           </tr>
         </thead>
         <tbody>
@@ -177,17 +177,17 @@ export function CompetitorComparison() {
               </td>
               <td className="text-center py-3.5 px-4">
                 <div className="flex justify-center">
+                  <StatusIcon status={feature.letsPoker} />
+                </div>
+              </td>
+              <td className="text-center py-3.5 px-4">
+                <div className="flex justify-center">
                   <StatusIcon status={feature.blindValet} />
                 </div>
               </td>
               <td className="text-center py-3.5 px-4">
                 <div className="flex justify-center">
                   <StatusIcon status={feature.tournamentDirector} />
-                </div>
-              </td>
-              <td className="text-center py-3.5 px-4">
-                <div className="flex justify-center">
-                  <StatusIcon status={feature.letsPoker} />
                 </div>
               </td>
             </motion.tr>
