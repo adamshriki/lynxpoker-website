@@ -70,7 +70,7 @@ const features: Feature[] = [
     lynx: "yes",
     blindValet: "yes",
     tournamentDirector: "no",
-    letsPoker: "yes",
+    letsPoker: "no",
   },
   {
     nameEn: "Instant Setup — No Training Needed",
@@ -78,7 +78,7 @@ const features: Feature[] = [
     lynx: "yes",
     blindValet: "yes",
     tournamentDirector: "no",
-    letsPoker: "partial",
+    letsPoker: "no",
   },
   {
     nameEn: "Transparent Fixed Pricing",
@@ -94,7 +94,7 @@ const features: Feature[] = [
     lynx: "yes",
     blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "no",
+    letsPoker: "yes",
   },
 ];
 
