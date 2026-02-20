@@ -20,9 +20,9 @@ const features: Feature[] = [
     nameEn: "Real-Time Multi-Device Sync",
     nameHe: "סנכרון בזמן אמת בין מכשירים",
     lynx: "yes",
-    blindValet: "yes",
+    blindValet: "no",
     tournamentDirector: "no",
-    letsPoker: "no",
+    letsPoker: "yes",
   },
   {
     nameEn: "Dealer Management",
