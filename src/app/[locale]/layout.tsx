@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Lato, Rubik } from "next/font/google";
 import { locales, type Locale, localeDirections } from "@/i18n/config";
+import CookieConsent from "@/components/ui/CookieConsent";
 import "../globals.css";
 
 const lato = Lato({
@@ -76,6 +77,7 @@ export default async function LocaleLayout({
       <body className={`${fontClass} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>
