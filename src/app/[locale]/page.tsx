@@ -34,6 +34,10 @@ import {
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { useState } from "react";
+import { PokerChip, ChipStack } from "@/components/animations/PokerChip";
+import { CardFan, DealCard } from "@/components/animations/CardFan";
+import { FeltTable, SpinWheel } from "@/components/animations/FeltTable";
+import { ParticleField, GoldenDust } from "@/components/animations/ParticleField";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -201,10 +205,28 @@ export default function HomePage() {
 
       {/* ═══════════ Hero ═══════════ */}
       <section className="relative pt-28 pb-4 px-6 overflow-hidden">
+        {/* Casino spotlight sweep across hero */}
+        <div className="absolute inset-0 spotlight-sweep pointer-events-none" />
+        
         {/* Atmospheric glows */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-amber-500/[0.06] rounded-full blur-[150px] pointer-events-none" />
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-amber-600/[0.04] rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-40 left-0 w-[300px] h-[400px] bg-amber-500/[0.03] rounded-full blur-[100px] pointer-events-none" />
+
+        {/* Poker chips floating */}
+        <PokerChip size={70} delay={0.8} className="top-24 left-[3%] hidden lg:block" />
+        <PokerChip size={45} delay={1.2} className="top-48 right-[5%] hidden lg:block" color="#d97706" />
+        <PokerChip size={55} delay={1.5} className="bottom-20 left-[8%] hidden lg:block" color="#fbbf24" />
+        
+        {/* Card fan decorations */}
+        <CardFan className="top-20 -left-10 hidden xl:block" direction="left" />
+        <CardFan className="top-32 -right-10 hidden xl:block" direction="right" />
+        
+        {/* Chip stacks */}
+        <ChipStack className="bottom-40 right-[4%] hidden lg:block" />
+
+        {/* Golden dust particles rising */}
+        <GoldenDust count={15} className="z-0" />
 
         {/* Floating suits */}
         <FloatingSuit
@@ -254,13 +276,13 @@ export default function HomePage() {
               {isRtl ? (
                 <>
                   טורנירי פוקר מקצועיים,{" "}
-                  <span className="text-gold-gradient">בכל מקום</span>
+                  <span className="text-gold-gradient casino-glow">בכל מקום</span>
                 </>
               ) : (
                 <>
                   Run tournaments{" "}
                   <br className="hidden md:block" />
-                  like a <span className="text-gold-gradient">pro</span>
+                  like a <span className="text-gold-gradient casino-glow">pro</span>
                 </>
               )}
             </h1>
@@ -292,8 +314,10 @@ export default function HomePage() {
             transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative">
+              {/* Felt table surface behind the clock */}
+              <FeltTable className="-top-16 left-1/2 -translate-x-1/2 w-[120%] opacity-60" />
               <div className="absolute -inset-6 bg-amber-500/[0.06] rounded-3xl blur-3xl pointer-events-none glow-pulse" />
-              <div className="relative">
+              <div className="relative neon-border rounded-2xl">
                 <LiveClock />
               </div>
               <div className="absolute -top-3 left-6 flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-rose-600 to-rose-500 shadow-[0_0_15px_rgba(225,29,72,0.4)]">
@@ -330,7 +354,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <p className="text-4xl md:text-5xl font-black text-gold-gradient">
+                <p className="text-4xl md:text-5xl font-black text-gold-gradient number-glow">
                   {value}
                 </p>
                 <p className="text-sm text-text-minus-1 mt-2 uppercase tracking-wider font-medium">
@@ -345,6 +369,11 @@ export default function HomePage() {
       {/* ═══════════ 10 Key Advantages ═══════════ */}
       <section id="features" className="py-24 px-6 relative z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/[0.02] to-transparent pointer-events-none" />
+        {/* Subtle floating particle field */}
+        <ParticleField count={12} />
+        {/* Decorative spin wheel */}
+        <SpinWheel className="top-20 -right-10 hidden lg:block opacity-60" />
+        <SpinWheel className="bottom-20 -left-10 hidden lg:block opacity-40" />
         <div className="mx-auto max-w-7xl relative">
           <motion.div
             className="text-center mb-16"
@@ -378,9 +407,9 @@ export default function HomePage() {
               return (
                 <motion.div
                   key={key}
-                  className="relative p-8 rounded-2xl border border-amber-500/[0.08] bg-gradient-to-br from-amber-500/[0.04] to-transparent group hover:border-amber-500/20 transition-all duration-500 card-glow"
+                  className="relative p-8 rounded-2xl border border-amber-500/[0.08] bg-gradient-to-br from-amber-500/[0.04] to-transparent group hover:border-amber-500/20 transition-all duration-500 card-glow card-tilt"
                   variants={fadeInUp}
-                  whileHover={{ y: -4 }}
+                  whileHover={{ y: -6, scale: 1.02 }}
                 >
                   {hasBadge && (
                     <span className="absolute top-4 end-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/20">
@@ -548,9 +577,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gold separator */}
+      <div className="mx-auto max-w-3xl px-6 relative z-10"><div className="gold-line" /></div>
+
       {/* ═══════════ Pricing ═══════════ */}
       <section id="pricing" className="py-24 px-6 relative z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/[0.03] to-transparent pointer-events-none" />
+        {/* Deal cards flying in behind pricing */}
+        <DealCard suit="♠" delay={0.3} className="top-10 left-[5%] hidden lg:block" />
+        <DealCard suit="♥" delay={0.5} className="top-32 right-[3%] hidden lg:block" />
+        <DealCard suit="♦" delay={0.7} className="bottom-20 left-[8%] hidden lg:block" />
+        <DealCard suit="♣" delay={0.9} className="bottom-10 right-[6%] hidden lg:block" />
         <div className="mx-auto max-w-7xl relative">
           <motion.div
             className="text-center mb-16"
@@ -592,8 +629,8 @@ export default function HomePage() {
                   key={tier}
                   className={`relative rounded-2xl border p-6 flex flex-col transition-all duration-500 ${
                     isPro
-                      ? "border-amber-500/30 bg-gradient-to-b from-amber-500/[0.08] to-amber-500/[0.02] card-glow scale-[1.02] lg:scale-105"
-                      : "border-amber-500/[0.08] bg-surface-plus-1/20 hover:border-amber-500/15"
+                      ? "border-amber-500/30 bg-gradient-to-b from-amber-500/[0.08] to-amber-500/[0.02] neon-border scale-[1.02] lg:scale-105"
+                      : "border-amber-500/[0.08] bg-surface-plus-1/20 hover:border-amber-500/15 card-tilt"
                   }`}
                   variants={fadeInUp}
                 >
@@ -651,6 +688,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Gold separator */}
+      <div className="mx-auto max-w-3xl px-6 relative z-10"><div className="gold-line" /></div>
 
       {/* ═══════════ Testimonials ═══════════ */}
       <section className="py-24 px-6 relative z-10">
@@ -774,7 +814,10 @@ export default function HomePage() {
       {/* ═══════════ Final CTA ═══════════ */}
       <section className="relative py-28 px-6 overflow-hidden z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-amber-500/[0.04] via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 felt-gradient pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/[0.06] rounded-full blur-[150px] pointer-events-none glow-pulse" />
+        {/* Golden dust rising in CTA */}
+        <GoldenDust count={20} />
 
         <FloatingSuit
           suit="♠"

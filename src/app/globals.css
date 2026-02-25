@@ -535,6 +535,107 @@ body {
   50% { transform: translateY(-20px) rotate(10deg); opacity: 0.06; }
 }
 
+/* Casino spotlight sweep */
+@keyframes spotlightSweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.spotlight-sweep {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(245, 158, 11, 0.04) 45%,
+    rgba(251, 191, 36, 0.08) 50%,
+    rgba(245, 158, 11, 0.04) 55%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: spotlightSweep 8s ease-in-out infinite;
+}
+
+/* Neon border glow */
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(245, 158, 11, 0.1), 0 0 15px rgba(245, 158, 11, 0.05), inset 0 0 5px rgba(245, 158, 11, 0.03); }
+  50% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.2), 0 0 30px rgba(245, 158, 11, 0.1), inset 0 0 10px rgba(245, 158, 11, 0.05); }
+}
+
+.neon-border {
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+/* Card flip */
+@keyframes cardFlip {
+  0% { transform: perspective(800px) rotateY(90deg); opacity: 0; }
+  50% { transform: perspective(800px) rotateY(-10deg); opacity: 1; }
+  100% { transform: perspective(800px) rotateY(0deg); opacity: 1; }
+}
+
+.card-flip {
+  animation: cardFlip 0.8s ease-out forwards;
+}
+
+/* Chip bounce */
+@keyframes chipBounce {
+  0% { transform: translateY(-80px) rotate(0deg); opacity: 0; }
+  60% { transform: translateY(5px) rotate(360deg); opacity: 1; }
+  80% { transform: translateY(-3px) rotate(380deg); }
+  100% { transform: translateY(0) rotate(360deg); opacity: 1; }
+}
+
+/* Velvet curtain reveal */
+@keyframes curtainReveal {
+  0% { clip-path: inset(0 50% 0 50%); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+.curtain-reveal {
+  animation: curtainReveal 1s ease-out forwards;
+}
+
+/* Casino marquee glow */
+@keyframes marqueeGlow {
+  0%, 100% { text-shadow: 0 0 4px rgba(251, 191, 36, 0.3), 0 0 8px rgba(245, 158, 11, 0.15); }
+  50% { text-shadow: 0 0 8px rgba(251, 191, 36, 0.5), 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1); }
+}
+
+.casino-glow {
+  animation: marqueeGlow 2s ease-in-out infinite;
+}
+
+/* Green felt gradient — the poker table surface */
+.felt-gradient {
+  background: radial-gradient(ellipse at 50% 50%, rgba(11, 79, 48, 0.08) 0%, transparent 70%);
+}
+
+/* Luxury gold line */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.3) 20%, rgba(251, 191, 36, 0.5) 50%, rgba(245, 158, 11, 0.3) 80%, transparent 100%);
+}
+
+/* Animated count-up number glow */
+.number-glow {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.15);
+}
+
+/* Card hover tilt 3D */
+.card-tilt {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.card-tilt:hover {
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateZ(10px);
+}
+
+/* Stacking z-index for layered elements */
+.stack-1 { z-index: 1; }
+.stack-2 { z-index: 2; }
+.stack-3 { z-index: 3; }
+
 /* Horizontal rule with suits */
 .suit-divider {
   display: flex;
