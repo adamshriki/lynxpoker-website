@@ -4,7 +4,7 @@
 
 Marketing website for **LynxPoker** — a B2B SaaS poker tournament management platform. The site targets poker club owners, home game organizers, and festival directors.
 
-**Live**: https://adamshriki.github.io/lynxpoker-website/
+**Live**: https://lynx.poker (Cloudflare Pages)
 **Repo**: https://github.com/adamshriki/lynxpoker-website
 
 ## Stack
@@ -15,7 +15,7 @@ Marketing website for **LynxPoker** — a B2B SaaS poker tournament management p
 - **i18n**: next-intl with `[locale]` folder structure (EN default, HE with RTL)
 - **Translation**: lingo.dev CLI with JSONC files (comments guide AI translation)
 - **Fonts**: Lato (Latin) + Rubik (Hebrew) via `next/font/google`
-- **Deployment**: GitHub Pages (static export)
+- **Deployment**: Cloudflare Pages (static export, auto-deploys on push to main)
 - **Design System**: Tokens from `lynx-design-system` repo
 
 ## Key Architecture Decisions
@@ -24,7 +24,7 @@ Marketing website for **LynxPoker** — a B2B SaaS poker tournament management p
 All theme tokens live in `src/app/globals.css` using `@theme inline` block and CSS custom properties. Tailwind v4 ignores `tailwind.config.ts`. Custom colors use semantic names: `--primary`, `--text-primary`, `--surface-primary`, `--border-primary`, etc.
 
 ### Static Export
-`output: "export"` in `next.config.ts`. No server components, no middleware, no API routes. `basePath` and `assetPrefix` set conditionally via `GITHUB_ACTIONS` env var for GitHub Pages.
+`output: "export"` in `next.config.ts`. No server components, no middleware, no API routes. No `basePath` needed (Cloudflare Pages serves from root).
 
 ### i18n with JSONC
 - Source of truth: `messages/en/*.jsonc` (English with `//` comments for translation guidance)
@@ -155,7 +155,7 @@ critical that you think outside the box!
 ## Gotchas
 
 - `git push` stderr output looks like an error in PowerShell but push succeeds — git writes progress to stderr
-- For `<img>` tags, Next.js does NOT auto-prepend basePath — always use `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/path`
+- For `<img>` tags use relative paths like `/logo.svg` (no basePath needed on Cloudflare Pages)
 - next-intl middleware is incompatible with static export — removed, root redirect handled in CI
 - The `comparison_table` block type uses `headers` and `rows` arrays (not `tableData`)
 - Blog post `"Previous"/"Next"` labels are hardcoded (not in message files yet)
@@ -166,3 +166,38 @@ critical that you think outside the box!
 - **Product**: LynxPoker (lynx.poker)
 - **Legal jurisdiction**: Tel Aviv-Jaffa, Israel
 - **Contact**: adam@lynx.poker
+
+## Frontend Design Skill (Anthropic Official)
+
+This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
+
+### Design Thinking
+
+Before coding, understand the context and commit to a BOLD aesthetic direction:
+- **Purpose**: What problem does this interface solve? Who uses it?
+- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. Use these for inspiration but design one that is true to the aesthetic direction.
+- **Constraints**: Technical requirements (framework, performance, accessibility).
+- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+
+**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
+
+Then implement working code that is:
+- Production-grade and functional
+- Visually striking and memorable
+- Cohesive with a clear aesthetic point-of-view
+- Meticulously refined in every detail
+
+### Frontend Aesthetics Guidelines
+
+Focus on:
+- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices. Pair a distinctive display font with a refined body font.
+- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
+- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
+- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
+- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, and grain overlays.
+
+NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
+
+Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.
+
+**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details.
