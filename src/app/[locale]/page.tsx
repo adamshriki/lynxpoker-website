@@ -34,6 +34,7 @@ import {
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { useState } from "react";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { PokerChip, ChipStack } from "@/components/animations/PokerChip";
 import { CardFan, DealCard } from "@/components/animations/CardFan";
 import { FeltTable, SpinWheel } from "@/components/animations/FeltTable";
@@ -182,13 +183,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="flex items-center gap-3">
-            <Link
-              href={locale === "en" ? "/he" : "/en"}
-              className="p-2 rounded-lg hover:bg-amber-500/5 transition-colors text-text-minus-1 hover:text-amber-400"
-              title={locale === "en" ? "עברית" : "English"}
-            >
-              <Globe className="w-4.5 h-4.5" />
-            </Link>
+            <LanguageSwitcher />
             <a href="https://app.lynx.poker/signin">
               <Button variant="ghost" size="sm">
                 Login
