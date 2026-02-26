@@ -535,9 +535,10 @@ body {
   50% { transform: translateY(-20px) rotate(10deg); opacity: 0.06; }
 }
 
-/* Casino spotlight sweep */
+/* Casino spotlight sweep — sweeps in first 30%, idle for remaining 70% */
 @keyframes spotlightSweep {
   0% { background-position: -200% 0; }
+  30% { background-position: 200% 0; }
   100% { background-position: 200% 0; }
 }
 
@@ -553,7 +554,7 @@ body {
     transparent 100%
   );
   background-size: 200% 100%;
-  animation: spotlightSweep 8s ease-in-out infinite;
+  animation: spotlightSweep 30s ease-in-out infinite;
 }
 
 /* Neon border glow */
