@@ -521,7 +521,7 @@ export default function HomePage() {
                 variants={fadeInUp}
               >
                 {i < 2 && (
-                  <div className="hidden md:block absolute top-12 start-[calc(100%+0.5rem)] w-[calc(100%-3rem)] h-px bg-gradient-to-r from-amber-500/20 to-transparent" />
+                  <div className="hidden md:block absolute top-8 h-px bg-gradient-to-r from-amber-500/30 via-amber-500/15 to-transparent" style={{ left: "calc(100% + 1rem)", width: "calc(100% - 6rem)" }} />
                 )}
                 <div className="flex flex-col items-center md:items-start gap-3 mb-4">
                   <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl">
