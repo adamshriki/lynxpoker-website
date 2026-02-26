@@ -64,7 +64,6 @@ export function LanguageSwitcher() {
                     : "text-text-minus-1 hover:text-text-primary hover:bg-amber-500/5"
                 }`}
               >
-                <span className="text-base">{l === "he" ? "🇮🇱" : "🇬🇧"}</span>
                 <span>{localeNames[l]}</span>
               </Link>
             ))}
