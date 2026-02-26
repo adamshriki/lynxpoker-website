@@ -503,9 +503,12 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {/* Connector lines between steps — sits behind the cards */}
-            <div className="hidden md:block absolute top-8 left-0 right-0 z-0 px-[15%]">
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+            {/* Connector dashes between step 1→2 and 2→3 */}
+            <div className="hidden md:block absolute top-8 z-0" style={{ left: "calc(33.333% - 1rem)", width: "2rem" }}>
+              <div className="h-px w-full border-t border-dashed border-amber-500/25" />
+            </div>
+            <div className="hidden md:block absolute top-8 z-0" style={{ left: "calc(66.666% - 1rem)", width: "2rem" }}>
+              <div className="h-px w-full border-t border-dashed border-amber-500/25" />
             </div>
 
             {(
