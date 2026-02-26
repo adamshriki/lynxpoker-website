@@ -74,7 +74,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={direction} className={`${lato.variable} ${rubik.variable}`}>
-      <body className={`${fontClass} font-sans antialiased`}>
+      <body className={`${fontClass} ${locale === "he" ? "font-hebrew" : "font-sans"} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
           <CookieConsent />
