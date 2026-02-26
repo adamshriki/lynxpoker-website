@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -496,21 +497,27 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+          {/* Step icons row with connectors */}
+          <div className="hidden md:flex items-center justify-between mb-6 px-4">
+            {["🚀", "🎯", "📈"].map((emoji, i) => (
+              <React.Fragment key={i}>
+                <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl shrink-0">
+                  {emoji}
+                </div>
+                {i < 2 && (
+                  <div className="flex-1 mx-4 border-t border-dashed border-amber-500/20" />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+
           <motion.div
-            className="relative grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-8"
             variants={stagger}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {/* Connector dashes between step 1→2 and 2→3 */}
-            <div className="hidden md:block absolute top-8 z-0" style={{ left: "calc(33.333% - 1rem)", width: "2rem" }}>
-              <div className="h-px w-full border-t border-dashed border-amber-500/25" />
-            </div>
-            <div className="hidden md:block absolute top-8 z-0" style={{ left: "calc(66.666% - 1rem)", width: "2rem" }}>
-              <div className="h-px w-full border-t border-dashed border-amber-500/25" />
-            </div>
-
             {(
               [
                 { key: "step1", num: "01", suit: "♠", emoji: "🚀" },
@@ -520,21 +527,23 @@ export default function HomePage() {
             ).map(({ key, num, suit, emoji }, i) => (
               <motion.div
                 key={key}
-                className="relative z-10 text-center md:text-start"
+                className="relative text-center md:text-start"
                 variants={fadeInUp}
               >
-                <div className="flex flex-col items-center md:items-start gap-3 mb-4">
+                {/* Icon + number: mobile only (desktop icons are in the row above) */}
+                <div className="flex flex-col items-center md:hidden gap-3 mb-4">
                   <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl">
                     {emoji}
                   </div>
-                  <div className="flex items-end gap-2">
-                    <span className="text-4xl font-black text-amber-500/20">
-                      {num}
-                    </span>
-                    <span className="text-xl text-amber-500/10 font-serif mb-0.5">
-                      {suit}
-                    </span>
-                  </div>
+                </div>
+                {/* Step number */}
+                <div className="flex items-end gap-2 mb-3 justify-center md:justify-start">
+                  <span className="text-4xl font-black text-amber-500/20">
+                    {num}
+                  </span>
+                  <span className="text-xl text-amber-500/10 font-serif mb-0.5">
+                    {suit}
+                  </span>
                 </div>
                 <h3 className="text-lg font-bold text-text-primary mb-2">
                   {t(`howItWorks.${key}.title`)}
