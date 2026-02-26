@@ -2,7 +2,7 @@
 
 **LynxPoker — Tournament Management Platform**
 
-**Last Updated:** [DATE]
+**Last Updated:** February 26, 2026
 
 **Provider:** Adam Shriki LTD (Company No. 515963320), Israel
 
