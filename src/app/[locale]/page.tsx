@@ -497,22 +497,8 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Step icons row with connectors */}
-          <div className="hidden md:flex items-center justify-between mb-6 px-4">
-            {["🚀", "🎯", "📈"].map((emoji, i) => (
-              <React.Fragment key={i}>
-                <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl shrink-0">
-                  {emoji}
-                </div>
-                {i < 2 && (
-                  <div className="flex-1 mx-4 border-t border-dashed border-amber-500/20" />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-
           <motion.div
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-10"
             variants={stagger}
             initial="initial"
             whileInView="animate"
@@ -527,17 +513,33 @@ export default function HomePage() {
             ).map(({ key, num, suit, emoji }, i) => (
               <motion.div
                 key={key}
-                className="relative text-center md:text-start"
+                className="relative flex flex-col items-center text-center"
                 variants={fadeInUp}
               >
-                {/* Icon + number: mobile only (desktop icons are in the row above) */}
-                <div className="flex flex-col items-center md:hidden gap-3 mb-4">
-                  <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl">
+                {/* Icon with connector lines on each side */}
+                <div className="flex items-center w-full mb-6">
+                  {/* Left connector (not on first step) */}
+                  {i > 0 ? (
+                    <div className="hidden md:block flex-1 border-t border-dashed border-amber-500/20" />
+                  ) : (
+                    <div className="hidden md:block flex-1" />
+                  )}
+
+                  {/* Icon */}
+                  <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl shrink-0 mx-4">
                     {emoji}
                   </div>
+
+                  {/* Right connector (not on last step) */}
+                  {i < 2 ? (
+                    <div className="hidden md:block flex-1 border-t border-dashed border-amber-500/20" />
+                  ) : (
+                    <div className="hidden md:block flex-1" />
+                  )}
                 </div>
-                {/* Step number */}
-                <div className="flex items-end gap-2 mb-3 justify-center md:justify-start">
+
+                {/* Number */}
+                <div className="flex items-end gap-2 mb-3 justify-center">
                   <span className="text-4xl font-black text-amber-500/20">
                     {num}
                   </span>
@@ -545,10 +547,12 @@ export default function HomePage() {
                     {suit}
                   </span>
                 </div>
+
+                {/* Title & description */}
                 <h3 className="text-lg font-bold text-text-primary mb-2">
                   {t(`howItWorks.${key}.title`)}
                 </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
+                <p className="text-sm text-text-secondary leading-relaxed max-w-xs">
                   {t(`howItWorks.${key}.description`)}
                 </p>
               </motion.div>
