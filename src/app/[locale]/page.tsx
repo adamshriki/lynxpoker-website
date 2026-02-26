@@ -497,12 +497,17 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid md:grid-cols-3 gap-8"
+            className="relative grid md:grid-cols-3 gap-8"
             variants={stagger}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
+            {/* Connector lines between steps — sits behind the cards */}
+            <div className="hidden md:block absolute top-8 left-0 right-0 z-0 px-[15%]">
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+            </div>
+
             {(
               [
                 { key: "step1", num: "01", suit: "♠", emoji: "🚀" },
@@ -512,12 +517,9 @@ export default function HomePage() {
             ).map(({ key, num, suit, emoji }, i) => (
               <motion.div
                 key={key}
-                className="relative text-center md:text-start"
+                className="relative z-10 text-center md:text-start"
                 variants={fadeInUp}
               >
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-8 h-px bg-gradient-to-r from-amber-500/30 via-amber-500/15 to-transparent" style={{ left: "calc(100% + 1rem)", width: "calc(100% - 6rem)" }} />
-                )}
                 <div className="flex flex-col items-center md:items-start gap-3 mb-4">
                   <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/10 flex items-center justify-center text-3xl">
                     {emoji}
