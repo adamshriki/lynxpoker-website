@@ -76,7 +76,45 @@ export default function TermsOfService() {
         </Section>
 
         <Section n="7" title="Subscription, Fees, and Payment">
-          <p>The Service is offered under various subscription tiers as published on our website. Fees are billed in advance on a recurring basis. All fees are non-refundable except as expressly stated herein or required by applicable law. The Company reserves the right to modify pricing with thirty (30) days&apos; prior written notice.</p>
+          <p>The Service is offered under the following subscription tiers:</p>
+
+          <div className="bg-surface-plus-1 border border-border-primary rounded-xl p-5 my-4 space-y-4">
+            <div>
+              <p className="font-bold text-text-primary">Free Plan ($0/month)</p>
+              <ul className="list-disc pl-6 space-y-1 mt-1 text-sm">
+                <li>1 active table</li>
+                <li>Beautiful tournament clock</li>
+                <li>Blinds structure builder</li>
+                <li>Prizes customizer</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-text-primary">Pro Plan ($39/month)</p>
+              <ul className="list-disc pl-6 space-y-1 mt-1 text-sm">
+                <li>Unlimited active tables</li>
+                <li>1 active tournament</li>
+                <li>Players analytics</li>
+                <li>Advanced prize calculator</li>
+                <li>Mystery bounty screen</li>
+                <li>Email support</li>
+                <li>Custom branding</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-text-primary">Elite Plan ($119/month)</p>
+              <ul className="list-disc pl-6 space-y-1 mt-1 text-sm">
+                <li>Everything in Pro, plus:</li>
+                <li>Unlimited simultaneous tournaments</li>
+                <li>Floor management app</li>
+                <li>Dealer table app</li>
+                <li>Shot clock</li>
+                <li>Priority support</li>
+                <li>SLA guarantee</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>Fees are billed in advance on a recurring basis (monthly or annually, as selected). All fees are non-refundable except as expressly stated herein or required by applicable law. The Company reserves the right to modify plan features and pricing with thirty (30) days&apos; prior written notice. Current pricing is published on our website at <a href="https://lynx.poker" className="text-text-blue-primary hover:underline">lynx.poker</a>.</p>
         </Section>
 
         <Section n="8" title="Service Availability">
