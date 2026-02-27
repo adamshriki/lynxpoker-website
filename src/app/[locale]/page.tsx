@@ -146,7 +146,7 @@ export default function HomePage() {
 
   const advantageSuits = ["♠", "♥", "♦", "♣", "♠", "♥", "♦", "♣", "♠", "♥"];
 
-  const pricingTiers = ["free", "starter", "pro", "enterprise"] as const;
+  const pricingTiers = ["free", "pro", "elite"] as const;
 
   return (
     <div className="min-h-screen bg-surface-primary overflow-x-hidden relative">
@@ -621,16 +621,15 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
             variants={stagger}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
             {pricingTiers.map((tier, i) => {
-              const isPro = tier === "pro";
-              const isEnterprise = tier === "enterprise";
-              const featureCounts = { free: 5, starter: 6, pro: 8, enterprise: 7 } as const;
+              const isElite = tier === "elite";
+              const featureCounts = { free: 4, pro: 7, elite: 6 } as const;
               const count = featureCounts[tier];
               const features: string[] = [];
               for (let j = 0; j < count; j++) {
@@ -641,13 +640,13 @@ export default function HomePage() {
                 <motion.div
                   key={tier}
                   className={`relative rounded-2xl border p-6 flex flex-col transition-all duration-500 ${
-                    isPro
+                    isElite
                       ? "border-amber-500/30 bg-gradient-to-b from-amber-500/[0.08] to-amber-500/[0.02] neon-border scale-[1.02] lg:scale-105"
                       : "border-amber-500/[0.08] bg-surface-plus-1/20 hover:border-amber-500/15 card-tilt"
                   }`}
                   variants={fadeInUp}
                 >
-                  {isPro && (
+                  {isElite && (
                     <div className="absolute -top-3.5 inset-x-0 flex justify-center">
                       <span className="px-4 py-1 rounded-full bg-amber-500 text-xs font-bold text-black uppercase tracking-wider">
                         {t("pricingSection.popular")}
@@ -684,15 +683,13 @@ export default function HomePage() {
                     ))}
                   </ul>
 
-                  <a href={isEnterprise ? "#" : "https://app.lynx.poker/signup"}>
+                  <a href="https://app.lynx.poker/signup">
                     <Button
-                      variant={isPro ? "primary" : "secondary"}
+                      variant={isElite ? "primary" : "secondary"}
                       size="md"
                       className="w-full"
                     >
-                      {isEnterprise
-                        ? t("pricingSection.ctaEnterprise")
-                        : t("pricingSection.cta")}
+                      {t("pricingSection.cta")}
                     </Button>
                   </a>
                 </motion.div>

@@ -125,7 +125,33 @@ You retain all rights in the data you submit to the Service. You grant us a limi
 
 ### 7.1 Plans and Pricing
 
-The Service is offered under various subscription tiers as published on our website. The Company reserves the right to modify pricing with thirty (30) days' prior written notice.
+The Service is offered under the following subscription tiers:
+
+**Free Plan ($0/month):**
+- 1 active table
+- Beautiful tournament clock
+- Blinds structure builder
+- Prizes customizer
+
+**Pro Plan ($39/month):**
+- Unlimited active tables
+- 1 active tournament
+- Players analytics
+- Advanced prize calculator
+- Mystery bounty screen
+- Email support
+- Custom branding
+
+**Elite Plan ($119/month):**
+- Everything in Pro, plus:
+- Unlimited simultaneous tournaments
+- Floor management app
+- Dealer table app
+- Shot clock
+- Priority support
+- SLA guarantee
+
+The Company reserves the right to modify plan features and pricing with thirty (30) days' prior written notice. Current pricing is published on our website at https://lynx.poker.
 
 ### 7.2 Payment
 

@@ -123,60 +123,44 @@
     "title": "Simple, transparent pricing",
     "subtitle": "Start free and scale as you grow. No hidden fees, no contracts.",
     "monthly": "month",
-    "popular": "Most Popular",
+    "popular": "Recommended",
     "cta": "Get Started",
-    "ctaEnterprise": "Contact Sales",
+    "ctaElite": "Get Started",
     "free": {
       "name": "Free",
       "price": "$0",
       "description": "Perfect for home games",
       "features": [
-        "1 active tournament",
-        "Up to 20 players per tournament",
-        "Basic blind structure templates",
-        "Tournament clock display",
-        "Community support"
-      ]
-    },
-    "starter": {
-      "name": "Starter",
-      "price": "$39",
-      "description": "For growing poker clubs",
-      "features": [
-        "3 active tournaments",
-        "Up to 50 players per tournament",
-        "Custom blind structures",
-        "Player database (up to 200)",
-        "Basic analytics",
-        "Email support"
+        "1 active table",
+        "Beautiful tournament clock",
+        "Blinds structure builder",
+        "Prizes customizer"
       ]
     },
     "pro": {
       "name": "Pro",
-      "price": "$129",
-      "description": "For serious operations",
+      "price": "$39",
+      "description": "For growing poker clubs",
       "features": [
-        "Unlimited tournaments",
-        "Unlimited players",
-        "Full player analytics & history",
-        "Dealer management",
-        "Floor manager app",
-        "Up to 10 staff accounts",
-        "Mystery bounty support",
-        "Priority support"
+        "Unlimited active tables",
+        "1 active tournament",
+        "Players analytics",
+        "Advanced prize calculator",
+        "Mystery bounty screen",
+        "Email support",
+        "Custom branding"
       ]
     },
-    "enterprise": {
-      "name": "Enterprise",
-      "price": "$249",
-      "description": "For multi-venue organizations",
+    "elite": {
+      "name": "Elite",
+      "price": "$119",
+      "description": "For serious operations",
       "features": [
-        "Everything in Pro",
-        "Multiple venues/organizations",
-        "Unlimited staff accounts",
-        "Custom branding",
-        "API access",
-        "Dedicated account manager",
+        "Unlimited simultaneous tournaments",
+        "Floor management app",
+        "Dealer table app",
+        "Shot clock",
+        "Priority support",
         "SLA guarantee"
       ]
     }
@@ -230,7 +214,7 @@
     "items": [
       {
         "question": "Is there really a free tier?",
-        "answer": "Yes! The free tier includes 1 active tournament with up to 20 players. It's perfect for home games and trying out the platform. No credit card required."
+        "answer": "Yes! The free tier includes 1 active table with a beautiful tournament clock, blinds structure builder, and prizes customizer. Perfect for home games. No credit card required."
       },
       {
         "question": "Can I switch plans at any time?",
@@ -250,7 +234,7 @@
       },
       {
         "question": "Can I manage multiple venues?",
-        "answer": "Yes, with our Pro and Enterprise plans. You can manage multiple poker clubs or locations from a single account."
+        "answer": "Yes, with the Elite plan. You get unlimited simultaneous tournaments with floor management and dealer apps."
       }
     ]
   },
@@ -277,7 +261,7 @@
   },
   "pricing": {
     "title": "Simple, transparent pricing",
-    "subtitle": "Free tier for small games. Club plans from $29/month. No hidden fees, no contracts.",
+    "subtitle": "Free tier for small games. Pro plans from $39/month. No hidden fees, no contracts.",
     "cta": "See pricing"
   },
   "cta": {
