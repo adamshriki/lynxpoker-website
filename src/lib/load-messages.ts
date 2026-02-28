@@ -30,8 +30,8 @@ export function loadMessages(locale: string): Record<string, any> {
     const content = fs.readFileSync(path.join(dir, file), "utf-8");
     const parsed = parseJsonc(content);
 
-    if (file === "ui.jsonc") {
-      // UI strings merge at top level
+    if (file === "ui.jsonc" || file === "story.jsonc") {
+      // UI and page-specific strings merge at top level
       Object.assign(messages, parsed);
     } else if (file === "blog-index.jsonc") {
       // Blog index has post metadata

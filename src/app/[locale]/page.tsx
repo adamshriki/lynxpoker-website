@@ -182,6 +182,12 @@ export default function HomePage() {
             >
               {t("nav.useCases")}
             </Link>
+            <Link
+              href={`/${locale}/story`}
+              className="text-sm text-text-minus-1 hover:text-amber-400 transition-colors"
+            >
+              {t("nav.story")}
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <LanguageSwitcher />

@@ -1,0 +1,128 @@
+{
+  "story": {
+    "metadata": {
+      // Page title for SEO
+      "title": "Our Story — LynxPoker",
+      // Meta description
+      "description": "Built by a player, for players. The story of how 20 years at the poker table and 15 years in tech led to the creation of LynxPoker."
+    },
+    "hero": {
+      // Main hero headline — bold, personal
+      "title": "Built by a Player, for Players",
+      // Subheadline
+      "subtitle": "The story of how frustration at the poker table became the catalyst for something better."
+    },
+    "stats": {
+      // Stats section numbers
+      "pokerYears": "20+",
+      "pokerLabel": "Years Playing Poker",
+      "techYears": "15+",
+      "techLabel": "Years in Tech",
+      "startupsCount": "50+",
+      "startupsLabel": "Products Designed",
+      "countriesCount": "30+",
+      "countriesLabel": "Countries Played"
+    },
+    "chapter1": {
+      // Chapter 1 — The Player's Frustration
+      "label": "Chapter 1",
+      "title": "The Player's Frustration",
+      "p1": "I've been playing poker tournaments for over twenty years. I've sat at tables in Las Vegas, Barcelona, Prague, Manila, and dozens of cities in between. I've experienced the thrill of deep runs, the agony of bad beats, and everything the tournament circuit has to offer.",
+      "p2": "But through all those years and all those events, one thing kept gnawing at me: the technology running these tournaments was embarrassingly bad.",
+      "p3": "Ugly clocks with fonts from the 90s. Displays that crashed mid-final table. Blind structures you needed a decoder ring to understand. I'd sit down at a $5,000 buy-in event at a world-class casino and stare at a tournament clock that looked like it was designed in Microsoft Paint.",
+      "p4": "Every other industry had evolved. We carry supercomputers in our pockets, stream 4K video instantly, manage entire businesses from our phones. Yet poker — a multi-billion dollar global industry — was stuck running tournaments on software that hadn't been meaningfully updated since 2005.",
+      // Pull quote for this chapter
+      "quote": "I'd sit at a $5,000 buy-in event and stare at a tournament clock that looked like it was designed in Microsoft Paint."
+    },
+    "chapter2": {
+      // Chapter 2 — The Director's Pain
+      "label": "Chapter 2",
+      "title": "The Director's Pain",
+      "p1": "Twenty years at the table means twenty years of friendships with the people who actually run these events — tournament directors, floor managers, the unsung heroes who make the poker world turn.",
+      "p2": "Over countless late-night conversations and post-tournament drinks, I heard the other side of the story. And it was even worse than I thought.",
+      "p3": "Directors were trapped. The software they relied on was absurdly complex — weeks of training just to set up a basic tournament. The interfaces were hostile, designed by engineers who had never dealt a hand of poker in their lives. Updates were rare, if they came at all. And the pricing? Some platforms charged thousands of dollars per year for what amounted to a glorified countdown timer.",
+      "p4": "These were passionate people who loved poker and wanted to create great experiences for their players. Instead, they spent their energy fighting their own tools. They deserved so much better — but there were simply no real alternatives.",
+      // Pull quote
+      "quote": "Directors spent their energy fighting their own tools instead of creating great experiences for their players."
+    },
+    "chapter3": {
+      // Chapter 3 — The Builder's Mission
+      "label": "Chapter 3",
+      "title": "The Builder's Mission",
+      "p1": "Here's the thing about me — I'm not just a poker player. In the poker world, they know me as \"CabesaBlanco.\" But outside the felt, I've spent over fifteen years building digital products.",
+      "p2": "I'm the founder of Uniqorn Design — a boutique product design agency that specializes in turning complex ideas into beautiful, intuitive digital products. We work with companies in AI, cybersecurity, SaaS, healthtech, and fintech. Our clients trust us to take their most complicated challenges and make them feel effortless.",
+      "p3": "I also created PokerGene — the first NFT collection designed specifically for the poker community. A passion project that brought together my two worlds: poker and creative technology. The PokerGene team includes WSOP bracelet winner Gaby Livshitz and online legend Tom Shaham, both with over $1M in career earnings.",
+      "p4": "So there I was: a player who felt the frustration firsthand, a designer who knew how to fix it, and a builder with the skills to make it real. The question wasn't whether I should build it. The question was why hadn't someone done it already.",
+      "p5": "That's how LynxPoker was born. Not in a boardroom. Not from a market analysis spreadsheet. From genuine love for the game and genuine frustration that the poker community deserved more.",
+      // Pull quote
+      "quote": "The question wasn't whether I should build it. The question was why hadn't someone done it already."
+    },
+    "chapter4": {
+      // Chapter 4 — What Makes LynxPoker Different
+      "label": "Chapter 4",
+      "title": "What Makes LynxPoker Different",
+      "p1": "LynxPoker is different because it was built by someone who sits on both sides of the table — as a player who demands a great experience, and as a designer who knows how to create one.",
+      "items": {
+        "design": {
+          "title": "Every Pixel Is Intentional",
+          "description": "Beautiful UI that players actually enjoy looking at. No more embarrassing displays at your events."
+        },
+        "simplicity": {
+          "title": "Complex Made Simple",
+          "description": "Tournament directors can set up in minutes, not hours. Because I've seen firsthand how precious time is on tournament day."
+        },
+        "updates": {
+          "title": "Constant Evolution",
+          "description": "I use my own product. I play in tournaments run on LynxPoker. Every pain point I feel becomes the next improvement."
+        },
+        "technology": {
+          "title": "Modern Technology",
+          "description": "Real-time WebSocket sync, cloud-native architecture. Not 2005 desktop software with a web wrapper."
+        },
+        "community": {
+          "title": "Built With Love",
+          "description": "This isn't a corporate product built by people who don't play poker. It's built by the community, for the community."
+        }
+      }
+    },
+    "testimonials": {
+      // Section title
+      "title": "What People Say",
+      "quote1": {
+        "text": "Adam lives and breathes product design... the next Jony Ive of SaaS products.",
+        "author": "Ayman Horani",
+        "role": "Product Manager"
+      },
+      "quote2": {
+        "text": "They managed to get up to speed with all the complexities quickly and immediately made a difference.",
+        "author": "Vanessa Johnson",
+        "role": "Product Manager at Careology"
+      }
+    },
+    "ventures": {
+      // Ventures/credentials section
+      "title": "The Journey So Far",
+      "uniqorn": {
+        "name": "Uniqorn Design",
+        "description": "Boutique product design agency specializing in AI, cybersecurity, SaaS, and healthtech. Transforming complex ideas into beautiful digital products.",
+        "link": "uniqorn.design"
+      },
+      "pokergene": {
+        "name": "PokerGene",
+        "description": "The first NFT collection for the poker community. Featuring WSOP bracelet winner Gaby Livshitz and online legend Tom Shaham.",
+        "link": "pokergene.art"
+      },
+      "lynxpoker": {
+        "name": "LynxPoker",
+        "description": "The modern poker tournament management platform. Built by a player, designed by an expert, engineered for the future.",
+        "link": "lynx.poker"
+      }
+    },
+    "cta": {
+      // Final call to action
+      "title": "Ready to Experience the Difference?",
+      "subtitle": "Join the growing community of poker clubs and tournament directors who chose something better.",
+      "button": "Start Free Today"
+    }
+  }
+}
